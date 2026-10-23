@@ -1,0 +1,21 @@
+series_id,fiscal_year,value,unit,source_url,notes
+cpi_avg,FY2017,4.81,%,https://www.finance.gov.pk/survey/chapters_23/07_Inflation.pdf,Annual average
+cpi_avg,FY2018,4.68,%,https://www.finance.gov.pk/survey/chapters_23/07_Inflation.pdf,Annual average
+cpi_avg,FY2019,6.8,%,https://www.finance.gov.pk/survey/chapters_23/07_Inflation.pdf,Annual average
+cpi_avg,FY2020,10.74,%,https://www.finance.gov.pk/survey/chapters_23/07_Inflation.pdf,Annual average
+cpi_avg,FY2021,8.9,%,https://www.finance.gov.pk/survey/chapters_23/07_Inflation.pdf,Annual average
+cpi_avg,FY2022,12.15,%,https://www.finance.gov.pk/survey/chapters_23/07_Inflation.pdf,Annual average
+cpi_avg,FY2023,29.2,%,https://www.sbp.org.pk/assets/document/publications/Inflation_Monitor_Aug_25.pdf,Annual average
+cpi_avg,FY2024,23.4,%,https://www.sbp.org.pk/assets/document/publications/Inflation_Monitor_Aug_25.pdf,Annual average
+cpi_avg,FY2025,4.5,%,https://www.sbp.org.pk/assets/document/publications/Inflation_Monitor_Aug_25.pdf,Annual average
+cpi_avg,FY2026,7.05,%,https://www.pbs.gov.pk/wp-content/uploads/2020/07/Press-Release-June-2026.pdf,Annual average
+policy_rate_end_june,FY2017,5.75,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2018,6.5,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2019,12.25,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2020,7.0,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2021,7.0,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2022,13.75,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2023,22.0,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2024,20.5,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2025,11.0,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June
+policy_rate_end_june,FY2026,11.5,%,https://www.sbp.org.pk/Ecodata/OVR-Repo-History.pdf,Rate in force at end-June

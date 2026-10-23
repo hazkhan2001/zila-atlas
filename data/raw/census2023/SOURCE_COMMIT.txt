@@ -1,0 +1,2 @@
+95cc68ce349fe567aee1ca5027c6d5e17c0e55a4 Sat Nov 2 01:00:02 2024 +0000
+Source: https://github.com/cran/PakPC2023 (CRAN mirror of PakPC2023 v0.2.0, Yaseen et al.), which digitizes PBS 7th Population and Housing Census 2023 tables. License GPL-2.

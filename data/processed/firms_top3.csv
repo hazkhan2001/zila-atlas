@@ -1,0 +1,25 @@
+view,province_code,rank,firm_id,firm_name,group_name,entity_type,sector,revenue_pkr_mn,fiscal_year_end,market_cap_pkr_mn,market_cap_date,source,confidence
+hq,IS,1,PAKISTAN-MOBILE-COMMUNICATIONS-JAZZ,Pakistan Mobile Communications (Jazz),VEON,foreign_subsidiary,Telecommunications,456600.0,2025-12-31,,,https://www.veon.com/integrated-annual-report-2025/pdf/pakistan.pdf,medium
+hq,IS,2,OGDC,Oil and Gas Development Company,,soe_listed,Oil and gas exploration,449191.0,2026-06-30,,,https://dps.psx.com.pk/company/OGDC,high
+hq,IS,3,ISLAMABAD-ELECTRIC-SUPPLY-COMPANY-IESCO,Islamabad Electric Supply Company (IESCO),Federal government (Power Division),soe_unlisted,Power distribution,331073.0,2025-06-30,,,https://iesco.com.pk/storage/SCI-FY-2026-28.pdf,high
+hq,KP,1,PESHAWAR-ELECTRIC-SUPPLY-COMPANY-PESCO,Peshawar Electric Supply Company (PESCO),Federal government (Power Division),soe_unlisted,Power distribution,237103.0,2025-06-30,,,https://pesco.com.pk/storage/app/uploads/public/6a4/f6d/073/6a4f6d073d4f0485534865.pdf,high
+hq,KP,2,KOHC,Kohat Cement,,listed,Cement,38531.0,2026-06-30,,,https://dps.psx.com.pk/company/KOHC,medium
+hq,KP,3,CHCC,Cherat Cement,Ghulam Faruque Group,listed,Cement,36483.0,2026-06-30,,,https://dps.psx.com.pk/company/CHCC,low
+hq,PB,1,SNGP,Sui Northern Gas Pipelines,,soe_listed,Gas distribution,1408551.0,2025-06-30,,,https://dps.psx.com.pk/dataportal/company/SNGP,medium
+hq,PB,2,LAHORE-ELECTRIC-SUPPLY-COMPANY-LESCO,Lahore Electric Supply Company (LESCO),Federal government (Power Division),soe_unlisted,Power distribution,660118.0,2025-06-30,,,https://www.brecorder.com/news/40428126,medium
+hq,PB,3,APL,Attock Petroleum,Attock Group,listed,Oil marketing,533097.0,2026-06-30,,,https://dps.psx.com.pk/company/APL,high
+hq,SD,1,PSO,Pakistan State Oil,,soe_listed,Oil marketing,3060026.0,2026-06-30,,,https://dps.psx.com.pk/download/document/283440.pdf,high
+hq,SD,2,KEL,K-Electric,KES Power,listed,Electric utility,614969.0,2024-06-30,,,https://dps.psx.com.pk/company/KEL,medium
+hq,SD,3,WAFI,Wafi Energy Pakistan,Asyad Holding,foreign_subsidiary,Oil marketing,468921.0,2025-12-31,,,https://mettisglobal.news/Wafi-Energy-gaining-steam-profits-top-Rs35bn-58721,medium
+operations,BA,1,SSGC,Sui Southern Gas Company,,soe_listed,Gas distribution,446444.0,2025-06-30,,,https://mettisglobal.news/SSGC-profit-nosedives-58-YoY-56475,medium
+operations,IS,1,SNGP,Sui Northern Gas Pipelines,,soe_listed,Gas distribution,1408551.0,2025-06-30,,,https://dps.psx.com.pk/dataportal/company/SNGP,medium
+operations,IS,2,ISLAMABAD-ELECTRIC-SUPPLY-COMPANY-IESCO,Islamabad Electric Supply Company (IESCO),Federal government (Power Division),soe_unlisted,Power distribution,331073.0,2025-06-30,,,https://iesco.com.pk/storage/SCI-FY-2026-28.pdf,high
+operations,KP,1,SNGP,Sui Northern Gas Pipelines,,soe_listed,Gas distribution,1408551.0,2025-06-30,,,https://dps.psx.com.pk/dataportal/company/SNGP,medium
+operations,KP,2,PESHAWAR-ELECTRIC-SUPPLY-COMPANY-PESCO,Peshawar Electric Supply Company (PESCO),Federal government (Power Division),soe_unlisted,Power distribution,237103.0,2025-06-30,,,https://pesco.com.pk/storage/app/uploads/public/6a4/f6d/073/6a4f6d073d4f0485534865.pdf,high
+operations,KP,3,LUCK,Lucky Cement,Yunus Brothers Group,listed,Cement,136527.0,2026-06-30,,,https://dps.psx.com.pk/company/LUCK,high
+operations,PB,1,SNGP,Sui Northern Gas Pipelines,,soe_listed,Gas distribution,1408551.0,2025-06-30,,,https://dps.psx.com.pk/dataportal/company/SNGP,medium
+operations,PB,2,LAHORE-ELECTRIC-SUPPLY-COMPANY-LESCO,Lahore Electric Supply Company (LESCO),Federal government (Power Division),soe_unlisted,Power distribution,660118.0,2025-06-30,,,https://www.brecorder.com/news/40428126,medium
+operations,PB,3,MULTAN-ELECTRIC-POWER-COMPANY-MEPCO,Multan Electric Power Company (MEPCO),Federal government (Power Division),soe_unlisted,Power distribution,524062.0,2025-06-30,,,https://mepco.com.pk/wp-content/uploads/2026/07/MEPCO-Annual-Report-Final.pdf,high
+operations,SD,1,KEL,K-Electric,KES Power,listed,Electric utility,614969.0,2024-06-30,,,https://dps.psx.com.pk/company/KEL,medium
+operations,SD,2,SSGC,Sui Southern Gas Company,,soe_listed,Gas distribution,446444.0,2025-06-30,,,https://mettisglobal.news/SSGC-profit-nosedives-58-YoY-56475,medium
+operations,SD,3,NRL,National Refinery,Attock Group,listed,Oil refining,440845.0,2026-06-30,,,https://mettisglobal.news/NRL-returns-to-profit-with-Rs616bn-earnings-in-FY26-62976,high

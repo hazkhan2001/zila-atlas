@@ -1,0 +1,9 @@
+creditor,creditor_type,value_usd_bn,period,source_url,notes
+Multilateral (excl. IMF),Multilateral,43.568,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,"World Bank, ADB, IsDB, AIIB and others combined"
+"Other bilateral, incl. China",Bilateral,14.046,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,Some loans reclassified to short-term from March 2026
+IMF,Multilateral,11.050,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,
+Commercial loans,Commercial,6.445,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,Includes Chinese commercial banks
+Eurobonds and sukuk,Bonds,6.008,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,
+Paris Club,Bilateral,5.263,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,
+Naya Pakistan Certificates,Diaspora,1.719,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,
+Non-resident bond holdings,Bonds,0.148,End-June 2026,https://www.sbp.org.pk/assets/document/pakdebt.pdf,Local-currency government bonds

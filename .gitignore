@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
+# Reports from compare_ocha.py are working files, not part of the site
+data/processed/ocha_crosswalk_candidates.csv
+data/processed/ocha_unmatched.csv

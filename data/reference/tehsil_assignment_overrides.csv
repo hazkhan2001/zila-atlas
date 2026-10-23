@@ -1,0 +1,80 @@
+province_code,old_district,tehsil_name,district_2023,confidence,note
+BA,Dera Bugti,Phelawagh,DERA BUGTI,medium,no census name match; kept in old district
+BA,Gwadar,Sunstar Sub,GWADAR,medium,no census name match; kept in old district
+BA,Jafarabad,Ghandakha,JAFFARABAD,high,census spelling Gandakha
+BA,Jafarabad,Jacobabad,JAFFARABAD,low,unclear source name; kept in old district
+BA,Kech,Kech,KECH,medium,no census name match; kept in old district
+BA,Kharan,Shahdo Garhi Sub,WASHUK,high,census lists Shahoo Garhi under Washuk (carved from Kharan)
+BA,Kohlu,Bekerh,DERA BUGTI,medium,census lists Baiker under Dera Bugti
+BA,Kohlu,Kut Mandai,SIBI,high,census lists Kot Mandai under Sibi
+BA,Loralai,Girsani Sub,KOHLU,medium,census lists Grisani under Kohlu
+BA,Loralai,Loralai,LORALAI,high,
+BA,Loralai,Sinjawi Sub,ZIARAT,medium,census lists Sinjawi under Ziarat
+BA,Qilla Abdullah,Dobandi Sub-,KILLA ABDULLAH,high,
+BA,Sibi,Khost,HARNAI,high,census lists Khoast under Harnai (carved from Sibi)
+BA,Zhob,Qamar Din Karez,ZHOB,medium,no census name match; kept in old district
+BA,Zhob,Sheerani,SHERANI,high,Sherani district carved from Zhob
+BA,Zhob,Shinkai,ZHOB,low,census has Shinki under Killa Saifullah; unclear if same place; kept in Zhob
+BA,Ziarat,Ziarat Sub Division,ZIARAT,high,
+KP,Bajaur,Khar,BAJAUR,high,
+KP,Bannu,Naurang,LAKKI MARWAT,high,census lists Sarai Naurang under Lakki Marwat
+KP,Battagram,Alai,BATAGRAM,high,
+KP,Khyber,Lower Orakzai,ORAKZAI,high,Orakzai tehsils
+KP,Khyber,Upper Orakzai,ORAKZAI,high,Orakzai tehsils
+KP,Lower Dir,Munda,LOWER DIR,medium,no census name match; kept in old district
+KP,Mansehra,Torgher,TORGHAR,high,Torghar district
+KP,North Waziristan,Fr Bannu,BANNU,medium,former FR merged in 2018
+KP,Orakzai,Fr Kohat,KOHAT,medium,former FR merged in 2018
+KP,Orakzai,Fr Peshawar,PESHAWAR,medium,former FR merged in 2018
+KP,South Waziristan,Fr D.I.Khan,DERA ISMAIL KHAN,medium,former FR merged in 2018
+KP,South Waziristan,Fr Lakki,LAKKI MARWAT,medium,former FR merged in 2018
+KP,South Waziristan,Fr Tank,TANK,medium,former FR merged in 2018
+PB,Dera Ghazi Khan,De-Excluded Area D.G.Khan,DERA GHAZI KHAN,high,
+PB,Dera Ghazi Khan,De-Excluded Area Rajanpur,RAJANPUR,high,
+PB,Sheikhpura,Nankana Sahab,NANKANA SAHIB,high,Nankana Sahib district
+PB,Sheikhpura,Shangla Hill,NANKANA SAHIB,high,census lists Sangla Hill under Nankana Sahib
+SD,Badin,Shaheed Fazal Rahu,BADIN,high,
+SD,Hyderabad,Tando Muhammad Khan,TANDO MUHAMMAD KHAN,high,Tando Muhammad Khan district
+SD,Qambar Shahdadkot,Bakrani Taluks,LARKANA,high,census lists Bakrani under Larkana
+SD,Karachi,Baldia Town,KEAMARI,medium,old town to 2023 district (approximate)
+SD,Karachi,Bin Qasim Town,MALIR,medium,old town to 2023 district (approximate)
+SD,Karachi,Clifton Cantonment,KARACHI SOUTH,medium,old town to 2023 district (approximate)
+SD,Karachi,Faisal Cantonment,KARACHI EAST,low,old town to 2023 district (approximate)
+SD,Karachi,Gadap Town,MALIR,medium,old town to 2023 district (approximate); part now in Karachi West
+SD,Karachi,Gulberg Town,KARACHI CENTRAL,medium,old town to 2023 district (approximate)
+SD,Karachi,Gulshan E Iqbal Town,KARACHI EAST,medium,old town to 2023 district (approximate)
+SD,Karachi,Jamshed Town,KARACHI EAST,medium,old town to 2023 district (approximate)
+SD,Karachi,Karachi Cantonment,KARACHI SOUTH,low,old town to 2023 district (approximate)
+SD,Karachi,Kiamari Town,KEAMARI,medium,old town to 2023 district (approximate)
+SD,Karachi,Korangi Creek Cantonment,KORANGI,medium,old town to 2023 district (approximate)
+SD,Karachi,Korangi Town,KORANGI,medium,old town to 2023 district (approximate)
+SD,Karachi,Landhi Town,KORANGI,medium,old town to 2023 district (approximate)
+SD,Karachi,Liaqatabad Town,KARACHI CENTRAL,medium,old town to 2023 district (approximate)
+SD,Karachi,Lyari Town,KARACHI SOUTH,medium,old town to 2023 district (approximate)
+SD,Karachi,Malir,MALIR,medium,old town to 2023 district (approximate)
+SD,Karachi,Malir Cantonment,MALIR,medium,old town to 2023 district (approximate)
+SD,Karachi,Manora Cantonment,KEAMARI,medium,old town to 2023 district (approximate)
+SD,Karachi,N.Nazimabad Town,KARACHI CENTRAL,medium,old town to 2023 district (approximate)
+SD,Karachi,New Karachi Town,KARACHI CENTRAL,medium,old town to 2023 district (approximate)
+SD,Karachi,Orangi Town,KARACHI WEST,medium,old town to 2023 district (approximate)
+SD,Karachi,Saddar Town,KARACHI SOUTH,medium,old town to 2023 district (approximate)
+SD,Karachi,Shah Faisal Town,KORANGI,medium,old town to 2023 district (approximate)
+SD,Karachi,Site Town,KEAMARI,medium,old town to 2023 district (approximate)
+JK,Azad Kashmir,Abbaspur,POONCH,high,AJK district
+JK,Azad Kashmir,Athumqam,NEELUM,high,AJK district
+JK,Azad Kashmir,Bagh,BAGH,high,AJK district
+JK,Azad Kashmir,Barnala,BHIMBER,high,AJK district
+JK,Azad Kashmir,Bhimber,BHIMBER,high,AJK district
+JK,Azad Kashmir,Dheerkot,BAGH,high,AJK district
+JK,Azad Kashmir,Dudyal,MIRPUR,high,AJK district
+JK,Azad Kashmir,Hajeera,POONCH,high,AJK district
+JK,Azad Kashmir,Hattian Bala,HATTIAN BALA,high,AJK district
+JK,Azad Kashmir,Haveli,HAVELI,high,AJK district
+JK,Azad Kashmir,Kotli,KOTLI,high,AJK district
+JK,Azad Kashmir,Mirpur,MIRPUR,high,AJK district
+JK,Azad Kashmir,Muzaffarabad,MUZAFFARABAD,high,AJK district
+JK,Azad Kashmir,Nakial,KOTLI,high,AJK district
+JK,Azad Kashmir,Pallandari,SUDHNOTI,high,AJK district
+JK,Azad Kashmir,Rawalakot,POONCH,high,AJK district
+JK,Azad Kashmir,Samahni,BHIMBER,high,AJK district
+JK,Azad Kashmir,Sehnsa,KOTLI,high,AJK district

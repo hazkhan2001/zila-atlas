@@ -1,0 +1,554 @@
+tehsil_name,province_code,old_district,district_id,district_name,method,confidence
+Awaran,BA,Awaran,BA-AWARAN,Awaran,exact,high
+Gishkore Sub,BA,Awaran,BA-AWARAN,Awaran,fuzzy+hint,high
+Jhal Jhao,BA,Awaran,BA-AWARAN,Awaran,fuzzy+hint,high
+Jhal Jhao Sub,BA,Awaran,BA-AWARAN,Awaran,fuzzy+hint,high
+Mashkai,BA,Awaran,BA-AWARAN,Awaran,exact,high
+Barkhan,BA,Barkhan,BA-BARKHAN,Barkhan,exact,high
+Chagai Sub,BA,Chagai,BA-CHAGAI,Chagai,fuzzy+hint,high
+Dalbadin,BA,Chagai,BA-CHAGAI,Chagai,fuzzy+hint,high
+Naukandi,BA,Chagai,BA-CHAGAI,Chagai,fuzzy+hint,high
+Taftan,BA,Chagai,BA-CHAGAI,Chagai,exact,high
+Chaman,BA,Qilla Abdullah,BA-CHAMAN,Chaman,exact,high
+Bekerh,BA,Kohlu,BA-DERA-BUGTI,Dera Bugti,override,medium
+Dera Bughti,BA,Dera Bugti,BA-DERA-BUGTI,Dera Bugti,fuzzy+hint,high
+Loti Sub,BA,Dera Bugti,BA-DERA-BUGTI,Dera Bugti,fuzzy+hint,high
+Malum,BA,Dera Bugti,BA-DERA-BUGTI,Dera Bugti,fuzzy+hint,high
+Phelawagh,BA,Dera Bugti,BA-DERA-BUGTI,Dera Bugti,override,medium
+Pir Koh,BA,Kohlu,BA-DERA-BUGTI,Dera Bugti,exact,high
+Sangsilla,BA,Dera Bugti,BA-DERA-BUGTI,Dera Bugti,fuzzy+hint,high
+Sui,BA,Dera Bugti,BA-DERA-BUGTI,Dera Bugti,exact,high
+Duki,BA,Loralai,BA-DUKI,Duki,exact,high
+Gwadar,BA,Gwadar,BA-GWADAR,Gwadar,exact,high
+Jiwani,BA,Gwadar,BA-GWADAR,Gwadar,exact,high
+Ormara,BA,Gwadar,BA-GWADAR,Gwadar,exact,high
+Pasni,BA,Gwadar,BA-GWADAR,Gwadar,exact,high
+Sunstar Sub,BA,Gwadar,BA-GWADAR,Gwadar,override,medium
+Harnai,BA,Sibi,BA-HARNAI,Harnai,exact,high
+Khost,BA,Sibi,BA-HARNAI,Harnai,override,high
+Shahrig,BA,Sibi,BA-HARNAI,Harnai,exact,high
+Ghandakha,BA,Jafarabad,BA-JAFFARABAD,Jaffarabad,override,high
+Jacobabad,BA,Jafarabad,BA-JAFFARABAD,Jaffarabad,override,low
+Jhat Pat,BA,Nasirabad,BA-JAFFARABAD,Jaffarabad,exact,high
+Usta Muhammad,BA,Jafarabad,BA-JAFFARABAD,Jaffarabad,exact,high
+Gandawa,BA,Khuzdar,BA-JHAL-MAGSI,Jhal Magsi,exact,high
+Jhal Magsi,BA,Jhal Magsi,BA-JHAL-MAGSI,Jhal Magsi,exact,high
+Mirpur Sub,BA,Jhal Magsi,BA-JHAL-MAGSI,Jhal Magsi,fuzzy+hint,high
+Balanari Sub,BA,Kachhi,BA-KACHHI,Kachhi,fuzzy+hint,high
+Bhag,BA,Kachhi,BA-KACHHI,Kachhi,exact,high
+Dhadar,BA,Kachhi,BA-KACHHI,Kachhi,exact,high
+Khattan Sub,BA,Kachhi,BA-KACHHI,Kachhi,fuzzy+hint,high
+Mach Sub,BA,Kachhi,BA-KACHHI,Kachhi,fuzzy+hint,high
+Sanni Sub,BA,Kachhi,BA-KACHHI,Kachhi,fuzzy+hint,high
+Gazg,BA,Kalat,BA-KALAT,Kalat,exact,high
+Johan,BA,Kalat,BA-KALAT,Kalat,exact,high
+Kalat,BA,Kalat,BA-KALAT,Kalat,exact,high
+Mango Char,BA,Kalat,BA-KALAT,Kalat,exact,high
+Balnigor,BA,Kech,BA-KECH,Kech,fuzzy+hint,high
+Buleda,BA,Kech,BA-KECH,Kech,fuzzy+hint,high
+Dasht,BA,Kech,BA-KECH,Kech,exact+hint,high
+Hoshab,BA,Kech,BA-KECH,Kech,exact,high
+Kech,BA,Kech,BA-KECH,Kech,override,medium
+Mand,BA,Kech,BA-KECH,Kech,exact,high
+Tump,BA,Kech,BA-KECH,Kech,exact,high
+Zamuran,BA,Kech,BA-KECH,Kech,fuzzy+hint,high
+Kharan,BA,Kharan,BA-KHARAN,Kharan,exact,high
+Aranji Sub,BA,Khuzdar,BA-KHUZDAR,Khuzdar,fuzzy+hint,high
+Karkah Sub,BA,Khuzdar,BA-KHUZDAR,Khuzdar,fuzzy+hint,high
+Khuzdar,BA,Khuzdar,BA-KHUZDAR,Khuzdar,exact,high
+Moola Sub,BA,Khuzdar,BA-KHUZDAR,Khuzdar,fuzzy+hint,high
+Nal Sub,BA,Khuzdar,BA-KHUZDAR,Khuzdar,fuzzy+hint,high
+Ornach Sub,BA,Khuzdar,BA-KHUZDAR,Khuzdar,fuzzy+hint,high
+Saroona Sub,BA,Khuzdar,BA-KHUZDAR,Khuzdar,fuzzy+hint,high
+Wadh Sub,BA,Khuzdar,BA-KHUZDAR,Khuzdar,fuzzy+hint,high
+Zehri,BA,Khuzdar,BA-KHUZDAR,Khuzdar,exact,high
+Dobandi Sub-,BA,Qilla Abdullah,BA-KILLA-ABDULLAH,Killa Abdullah,override,high
+Gulistan,BA,Qilla Abdullah,BA-KILLA-ABDULLAH,Killa Abdullah,exact,high
+Killa Abdullah,BA,Qilla Abdullah,BA-KILLA-ABDULLAH,Killa Abdullah,exact,high
+Badini,BA,Zhob,BA-KILLA-SAIFULLAH,Killa Saifullah,exact,high
+Kan Mehtarzai,BA,Qilla Saifullah,BA-KILLA-SAIFULLAH,Killa Saifullah,exact,high
+Killa Saifullah,BA,Qilla Saifullah,BA-KILLA-SAIFULLAH,Killa Saifullah,exact,high
+Loi Band,BA,Qilla Saifullah,BA-KILLA-SAIFULLAH,Killa Saifullah,exact,high
+Muslim Bagh,BA,Qilla Saifullah,BA-KILLA-SAIFULLAH,Killa Saifullah,exact,high
+Girsani Sub,BA,Loralai,BA-KOHLU,Kohlu,override,medium
+Kahan,BA,Kohlu,BA-KOHLU,Kohlu,exact,high
+Kohlu,BA,Kohlu,BA-KOHLU,Kohlu,exact,high
+Mawand,BA,Kohlu,BA-KOHLU,Kohlu,exact,high
+Bela,BA,Lasbela,BA-LASBELA,Lasbela,exact,high
+Durji,BA,Lasbela,BA-LASBELA,Lasbela,fuzzy+hint,high
+Gaddani,BA,Lasbela,BA-LASBELA,Lasbela,exact,high
+Hub,BA,Lasbela,BA-LASBELA,Lasbela,exact,high
+Kanraj,BA,Lasbela,BA-LASBELA,Lasbela,exact,high
+Lakhra,BA,Lasbela,BA-LASBELA,Lasbela,exact,high
+Liari,BA,Lasbela,BA-LASBELA,Lasbela,exact,high
+Sonmiani,BA,Lasbela,BA-LASBELA,Lasbela,fuzzy+hint,high
+Uthal,BA,Lasbela,BA-LASBELA,Lasbela,exact,high
+Loralai,BA,Loralai,BA-LORALAI,Loralai,override,high
+Mekhtar,BA,Loralai,BA-LORALAI,Loralai,exact,high
+Dasht,BA,Mastung,BA-MASTUNG,Mastung,exact+hint,high
+Khad Kocha Sub-,BA,Mastung,BA-MASTUNG,Mastung,fuzzy+hint,high
+Kirdgap Sub-,BA,Mastung,BA-MASTUNG,Mastung,fuzzy+hint,high
+Mastung,BA,Mastung,BA-MASTUNG,Mastung,exact,high
+Drug Sub,BA,Musakhel,BA-MUSAKHEL,Musakhel,fuzzy+hint,high
+Kingri,BA,Musakhel,BA-MUSAKHEL,Musakhel,exact,high
+Musa Khel,BA,Musakhel,BA-MUSAKHEL,Musakhel,exact,high
+Baba_Kot,BA,Nasirabad,BA-NASIRABAD,Nasirabad,exact,high
+Chattar,BA,Nasirabad,BA-NASIRABAD,Nasirabad,exact,high
+Dera_Murad_Jamali,BA,Nasirabad,BA-NASIRABAD,Nasirabad,exact,high
+Tamboo,BA,Nasirabad,BA-NASIRABAD,Nasirabad,exact+hint,high
+Dak_,BA,Nushki,BA-NUSHKI,Nushki,exact,high
+Nushki_,BA,Nushki,BA-NUSHKI,Nushki,exact,high
+Gichk,BA,Panjgur,BA-PANJGUR,Panjgur,exact,high
+Gowargo,BA,Panjgur,BA-PANJGUR,Panjgur,exact,high
+Panjgur,BA,Panjgur,BA-PANJGUR,Panjgur,exact,high
+Parome,BA,Panjgur,BA-PANJGUR,Panjgur,fuzzy+hint,high
+Barshore,BA,Pishin,BA-PISHIN,Pishin,exact,high
+Huramzai,BA,Pishin,BA-PISHIN,Pishin,fuzzy+hint,high
+Karezat,BA,Pishin,BA-PISHIN,Pishin,exact,high
+Pishin,BA,Pishin,BA-PISHIN,Pishin,exact,high
+Saranan,BA,Pishin,BA-PISHIN,Pishin,exact,high
+Panj Pai Sub-,BA,Quetta,BA-QUETTA,Quetta,fuzzy+hint,high
+Quetta City,BA,Quetta,BA-QUETTA,Quetta,fuzzy+hint,high
+Quetta Saddar,BA,Quetta,BA-QUETTA,Quetta,fuzzy+hint,high
+Sheerani,BA,Zhob,BA-SHERANI,Sherani,override,high
+Kut Mandai,BA,Kohlu,BA-SIBI,Sibi,override,high
+Lehri,BA,Kachhi,BA-SIBI,Sibi,exact,high
+Sangan,BA,Sibi,BA-SIBI,Sibi,exact,high
+Sibi,BA,Sibi,BA-SIBI,Sibi,exact,high
+Sohbatpur,BA,Jafarabad,BA-SOHBATPUR,Sohbatpur,exact,high
+Surab,BA,Kalat,BA-SURAB,Surab,exact,high
+Besima,BA,Kharan,BA-WASHUK,Washuk,exact,high
+Mashkhel,BA,Kharan,BA-WASHUK,Washuk,exact,high
+Nag,BA,Kharan,BA-WASHUK,Washuk,exact,high
+Shahdo Garhi Sub,BA,Kharan,BA-WASHUK,Washuk,override,high
+Washuk,BA,Kharan,BA-WASHUK,Washuk,exact,high
+Ashwat Sub-,BA,Zhob,BA-ZHOB,Zhob,fuzzy+hint,high
+Kashatoo Sub-,BA,Zhob,BA-ZHOB,Zhob,fuzzy+hint,high
+Qamar Din Karez,BA,Zhob,BA-ZHOB,Zhob,override,medium
+Sambaza Sub,BA,Zhob,BA-ZHOB,Zhob,fuzzy+hint,high
+Shinkai,BA,Zhob,BA-ZHOB,Zhob,override,low
+Zhob,BA,Zhob,BA-ZHOB,Zhob,exact,high
+Sinjawi Sub,BA,Loralai,BA-ZIARAT,Ziarat,override,medium
+Ziarat Sub Division,BA,Ziarat,BA-ZIARAT,Ziarat,override,high
+Astore,GB,Astore,GB-ASTORE,Astore,hint_layer,high
+Chilas,GB,Diamer,GB-DIAMER,Diamer,hint_layer,high
+Darel Tangir,GB,Diamer,GB-DIAMER,Diamer,hint_layer,high
+Khaplu,GB,Ghanche,GB-GHANCHE,Ghanche,hint_layer,high
+Mashabrum,GB,Ghanche,GB-GHANCHE,Ghanche,hint_layer,high
+Gupis,GB,Ghizer,GB-GHIZER,Ghizer,hint_layer,high
+Ishkomen,GB,Ghizer,GB-GHIZER,Ghizer,hint_layer,high
+Punial,GB,Ghizer,GB-GHIZER,Ghizer,hint_layer,high
+Yasin,GB,Ghizer,GB-GHIZER,Ghizer,hint_layer,high
+Gilgit,GB,Gilgit,GB-GILGIT,Gilgit,hint_layer,high
+Aliabad,GB,Hunza,GB-HUNZA,Hunza,hint_layer,high
+Gojal,GB,Hunza,GB-HUNZA,Hunza,hint_layer,high
+Kharmang,GB,Kharmang,GB-KHARMANG,Kharmang,hint_layer,high
+Nagar-I,GB,Nagar,GB-NAGAR,Nagar,hint_layer,high
+Nagar-Ii,GB,Nagar,GB-NAGAR,Nagar,hint_layer,high
+Shigar,GB,Shigar,GB-SHIGAR,Shigar,hint_layer,high
+Gultari,GB,Skardu,GB-SKARDU,Skardu,hint_layer,high
+Rondu,GB,Skardu,GB-SKARDU,Skardu,hint_layer,high
+Skardu,GB,Skardu,GB-SKARDU,Skardu,hint_layer,high
+Islamabad,IS,Islamabad Capital Territory,IS-ISLAMABAD,Islamabad,exact,high
+Bagh,JK,Azad Kashmir,JK-BAGH,Bagh,override,high
+Dheerkot,JK,Azad Kashmir,JK-BAGH,Bagh,override,high
+Barnala,JK,Azad Kashmir,JK-BHIMBER,Bhimber,override,high
+Bhimber,JK,Azad Kashmir,JK-BHIMBER,Bhimber,override,high
+Samahni,JK,Azad Kashmir,JK-BHIMBER,Bhimber,override,high
+Hattian Bala,JK,Azad Kashmir,JK-HATTIAN-BALA,Hattian Bala,override,high
+Haveli,JK,Azad Kashmir,JK-HAVELI,Haveli,override,high
+Kotli,JK,Azad Kashmir,JK-KOTLI,Kotli,override,high
+Nakial,JK,Azad Kashmir,JK-KOTLI,Kotli,override,high
+Sehnsa,JK,Azad Kashmir,JK-KOTLI,Kotli,override,high
+Dudyal,JK,Azad Kashmir,JK-MIRPUR,Mirpur,override,high
+Mirpur,JK,Azad Kashmir,JK-MIRPUR,Mirpur,override,high
+Muzaffarabad,JK,Azad Kashmir,JK-MUZAFFARABAD,Muzaffarabad,override,high
+Athumqam,JK,Azad Kashmir,JK-NEELUM,Neelum,override,high
+Abbaspur,JK,Azad Kashmir,JK-POONCH,Poonch,override,high
+Hajeera,JK,Azad Kashmir,JK-POONCH,Poonch,override,high
+Rawalakot,JK,Azad Kashmir,JK-POONCH,Poonch,override,high
+Pallandari,JK,Azad Kashmir,JK-SUDHNOTI,Sudhnoti,override,high
+Abbottabad,KP,Abbottabad,KP-ABBOTTABAD,Abbottabad,exact,high
+Havelian,KP,Abbottabad,KP-ABBOTTABAD,Abbottabad,exact,high
+Bar Chamarkand,KP,Bajaur,KP-BAJAUR,Bajaur,fuzzy+hint,high
+Barang,KP,Bajaur,KP-BAJAUR,Bajaur,exact,high
+Khar,KP,Bajaur,KP-BAJAUR,Bajaur,override,high
+Mamund,KP,Bajaur,KP-BAJAUR,Bajaur,exact,high
+Nawagai,KP,Bajaur,KP-BAJAUR,Bajaur,exact,high
+Salarzai,KP,Bajaur,KP-BAJAUR,Bajaur,exact,high
+Utman Khel,KP,Lower Dir,KP-BAJAUR,Bajaur,exact,high
+Bannu,KP,Bannu,KP-BANNU,Bannu,exact,high
+Domel,KP,Karak,KP-BANNU,Bannu,exact,high
+Fr Bannu,KP,North Waziristan,KP-BANNU,Bannu,override,medium
+Alai,KP,Battagram,KP-BATTAGRAM,Battagram,override,high
+Batagram,KP,Battagram,KP-BATTAGRAM,Battagram,exact,high
+Daggar,KP,Buner,KP-BUNER,Buner,exact,high
+Gagra,KP,Buner,KP-BUNER,Buner,exact,high
+Khado Khel,KP,Buner,KP-BUNER,Buner,exact,high
+Charsadda,KP,Charsadda,KP-CHARSADDA,Charsadda,exact,high
+Shabqadar,KP,Charsadda,KP-CHARSADDA,Charsadda,exact,high
+Tangi,KP,Charsadda,KP-CHARSADDA,Charsadda,exact,high
+D.I.Khan,KP,Dera Ismail Khan,KP-DERA-ISMAIL-KHAN,Dera Ismail Khan,exact,high
+Daraban,KP,Dera Ismail Khan,KP-DERA-ISMAIL-KHAN,Dera Ismail Khan,exact,high
+Fr D.I.Khan,KP,South Waziristan,KP-DERA-ISMAIL-KHAN,Dera Ismail Khan,override,medium
+Kulachi,KP,Tank,KP-DERA-ISMAIL-KHAN,Dera Ismail Khan,exact,high
+Paharpur,KP,Dera Ismail Khan,KP-DERA-ISMAIL-KHAN,Dera Ismail Khan,exact,high
+Paroa,KP,Dera Ismail Khan,KP-DERA-ISMAIL-KHAN,Dera Ismail Khan,exact,high
+Hangu,KP,Hangu,KP-HANGU,Hangu,exact,high
+Tall,KP,Kurram,KP-HANGU,Hangu,exact,high
+Ghazi,KP,Haripur,KP-HARIPUR,Haripur,exact,high
+Haripur,KP,Haripur,KP-HARIPUR,Haripur,exact,high
+Banda Daud Shah,KP,Karak,KP-KARAK,Karak,exact,high
+Karak,KP,Karak,KP-KARAK,Karak,exact,high
+Takht E Nasrati,KP,Karak,KP-KARAK,Karak,exact,high
+Bara,KP,Khyber,KP-KHYBER,Khyber,exact,high
+Jamrud,KP,Khyber,KP-KHYBER,Khyber,exact,high
+Landi Kotal,KP,Khyber,KP-KHYBER,Khyber,exact,high
+Fr Kohat,KP,Orakzai,KP-KOHAT,Kohat,override,medium
+Kohat,KP,Kohat,KP-KOHAT,Kohat,exact,high
+Lachi,KP,Kohat,KP-KOHAT,Kohat,exact,high
+Palas,KP,Kohistan,KP-KOLAI-PALAS,Kolai Palas,exact,high
+Central Kurram,KP,Kurram,KP-KURRAM,Kurram,fuzzy+hint,high
+Lower Kurram,KP,Kurram,KP-KURRAM,Kurram,exact,high
+Upper Kurram,KP,Kurram,KP-KURRAM,Kurram,exact,high
+Fr Lakki,KP,South Waziristan,KP-LAKKI-MARWAT,Lakki Marwat,override,medium
+Lakki Marwat,KP,Lakki Marwat,KP-LAKKI-MARWAT,Lakki Marwat,exact,high
+Naurang,KP,Bannu,KP-LAKKI-MARWAT,Lakki Marwat,override,high
+Chitral,KP,Chitral,KP-LOWER-CHITRAL,Lower Chitral,exact,high
+Adenzai,KP,Lower Dir,KP-LOWER-DIR,Lower Dir,exact,high
+Lalqilla,KP,Lower Dir,KP-LOWER-DIR,Lower Dir,fuzzy+hint,high
+Munda,KP,Lower Dir,KP-LOWER-DIR,Lower Dir,override,medium
+Samarbagh(Barwa),KP,Lower Dir,KP-LOWER-DIR,Lower Dir,fuzzy+hint,high
+Temergara,KP,Lower Dir,KP-LOWER-DIR,Lower Dir,exact,high
+Pattan,KP,Kohistan,KP-LOWER-KOHISTAN,Lower Kohistan,exact,high
+Sam Ranizai,KP,Malakand,KP-MALAKAND,Malakand,exact,high
+Swat Ranizai,KP,Malakand,KP-MALAKAND,Malakand,exact,high
+Balakot,KP,Mansehra,KP-MANSEHRA,Mansehra,exact,high
+Mansehra,KP,Mansehra,KP-MANSEHRA,Mansehra,exact,high
+Oghi,KP,Mansehra,KP-MANSEHRA,Mansehra,exact,high
+Katlang,KP,Mardan,KP-MARDAN,Mardan,exact,high
+Mardan,KP,Mardan,KP-MARDAN,Mardan,exact,high
+Takht Bhai,KP,Mardan,KP-MARDAN,Mardan,exact,high
+Ambar Utman Khel,KP,Mohmand,KP-MOHMAND,Mohmand,exact,high
+Halimzai,KP,Mohmand,KP-MOHMAND,Mohmand,exact,high
+Pindiali,KP,Mohmand,KP-MOHMAND,Mohmand,exact,high
+Prang Ghar,KP,Mohmand,KP-MOHMAND,Mohmand,exact,high
+Safi,KP,Mohmand,KP-MOHMAND,Mohmand,exact,high
+Upper Momand,KP,Mohmand,KP-MOHMAND,Mohmand,fuzzy+hint,high
+Yaka Ghund,KP,Mohmand,KP-MOHMAND,Mohmand,fuzzy+hint,high
+Data Khel,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,fuzzy+hint,high
+Dossali,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,exact,high
+Garyum,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,fuzzy+hint,high
+Ghulam Khan,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,exact,high
+Mir Ali,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,exact,high
+Miran Shah,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,exact,high
+Razmak,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,exact,high
+Shewa,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,exact,high
+Spinwam,KP,North Waziristan,KP-NORTH-WAZIRISTAN,North Waziristan,exact,high
+Nowshera,KP,Nowshera,KP-NOWSHERA,Nowshera,exact,high
+Pabbi,KP,Nowshera,KP-NOWSHERA,Nowshera,exact,high
+Central Orakzai,KP,Orakzai,KP-ORAKZAI,Orakzai,fuzzy+hint,high
+Ismailzai,KP,Orakzai,KP-ORAKZAI,Orakzai,exact,high
+Lower Orakzai,KP,Khyber,KP-ORAKZAI,Orakzai,override,high
+Upper Orakzai,KP,Khyber,KP-ORAKZAI,Orakzai,override,high
+Fr Peshawar,KP,Orakzai,KP-PESHAWAR,Peshawar,override,medium
+Peshawar Cantonment,KP,Peshawar,KP-PESHAWAR,Peshawar,fuzzy+hint,high
+Peshawar I,KP,Peshawar,KP-PESHAWAR,Peshawar,fuzzy+hint,high
+Peshawar Ii,KP,Peshawar,KP-PESHAWAR,Peshawar,fuzzy+hint,high
+Peshawar Iii,KP,Peshawar,KP-PESHAWAR,Peshawar,fuzzy+hint,high
+Peshawar Iv,KP,Peshawar,KP-PESHAWAR,Peshawar,fuzzy+hint,high
+Alpuri,KP,Shangla,KP-SHANGLA,Shangla,exact,high
+Bisham,KP,Shangla,KP-SHANGLA,Shangla,exact,high
+Chiksar,KP,Shangla,KP-SHANGLA,Shangla,fuzzy+hint,high
+Martung,KP,Shangla,KP-SHANGLA,Shangla,exact,high
+Puran,KP,Shangla,KP-SHANGLA,Shangla,exact,high
+Birmal,KP,South Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,fuzzy+hint,high
+Ladha,KP,North Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,exact,high
+Makin,KP,North Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,exact,high
+Saraogha,KP,South Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,fuzzy+hint,high
+Serwekai,KP,South Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,exact,high
+Tiarza,KP,South Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,exact,high
+Toi Khulla,KP,South Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,exact,high
+Wana,KP,South Waziristan,KP-SOUTH-WAZIRISTAN,South Waziristan,exact,high
+Lahor,KP,Swabi,KP-SWABI,Swabi,exact,high
+Razar,KP,Swabi,KP-SWABI,Swabi,exact,high
+Swabi,KP,Swabi,KP-SWABI,Swabi,exact,high
+Topi,KP,Swabi,KP-SWABI,Swabi,exact,high
+Babuzai,KP,Swat,KP-SWAT,Swat,exact,high
+Bahrain,KP,Swat,KP-SWAT,Swat,fuzzy+hint,high
+Barikot,KP,Swat,KP-SWAT,Swat,exact,high
+Charbagh,KP,Swat,KP-SWAT,Swat,exact,high
+Kabal,KP,Swat,KP-SWAT,Swat,exact,high
+Khawaza Khela,KP,Swat,KP-SWAT,Swat,exact,high
+Matta,KP,Swat,KP-SWAT,Swat,exact,high
+Fr Tank,KP,South Waziristan,KP-TANK,Tank,override,medium
+Tank,KP,Tank,KP-TANK,Tank,exact,high
+Torgher,KP,Mansehra,KP-TORGHAR,Torghar,override,high
+Mastuj,KP,Chitral,KP-UPPER-CHITRAL,Upper Chitral,exact,high
+Dir,KP,Upper Dir,KP-UPPER-DIR,Upper Dir,exact,high
+Sharingal,KP,Upper Dir,KP-UPPER-DIR,Upper Dir,exact,high
+Wari,KP,Upper Dir,KP-UPPER-DIR,Upper Dir,exact,high
+Dassu,KP,Kohistan,KP-UPPER-KOHISTAN,Upper Kohistan,exact,high
+Kandia,KP,Kohistan,KP-UPPER-KOHISTAN,Upper Kohistan,exact,high
+Attock,PB,Attock,PB-ATTOCK,Attock,exact,high
+Fateh Jang,PB,Attock,PB-ATTOCK,Attock,exact,high
+Hassanabdal,PB,Attock,PB-ATTOCK,Attock,fuzzy+hint,high
+Hazro,PB,Attock,PB-ATTOCK,Attock,exact,high
+Jand,PB,Attock,PB-ATTOCK,Attock,exact,high
+Pindi Gheb,PB,Attock,PB-ATTOCK,Attock,exact,high
+Bahawalnagar,PB,Bahawalnagar,PB-BAHAWALNAGAR,Bahawalnagar,exact,high
+Chishtian,PB,Bahawalnagar,PB-BAHAWALNAGAR,Bahawalnagar,exact,high
+Fort Abbas,PB,Bahawalnagar,PB-BAHAWALNAGAR,Bahawalnagar,exact,high
+Haroonabad,PB,Bahawalnagar,PB-BAHAWALNAGAR,Bahawalnagar,exact,high
+Minchinabad,PB,Bahawalnagar,PB-BAHAWALNAGAR,Bahawalnagar,exact,high
+Ahmadpur East,PB,Bahawalpur,PB-BAHAWALPUR,Bahawalpur,exact,high
+Bahawalpur,PB,Bahawalpur,PB-BAHAWALPUR,Bahawalpur,fuzzy+hint,high
+Bahawalpur City,PB,Lodhran,PB-BAHAWALPUR,Bahawalpur,exact,high
+Hasilpur,PB,Bahawalpur,PB-BAHAWALPUR,Bahawalpur,exact,high
+Khairpur Tamewali,PB,Bahawalpur,PB-BAHAWALPUR,Bahawalpur,exact,high
+Yazman,PB,Bahawalpur,PB-BAHAWALPUR,Bahawalpur,exact,high
+Bhakkar,PB,Bhakkar,PB-BHAKKAR,Bhakkar,exact,high
+Darya Khan,PB,Bhakkar,PB-BHAKKAR,Bhakkar,exact,high
+Kalur Kot,PB,Bhakkar,PB-BHAKKAR,Bhakkar,exact,high
+Mankera,PB,Bhakkar,PB-BHAKKAR,Bhakkar,exact,high
+Chakwal,PB,Chakwal,PB-CHAKWAL,Chakwal,exact,high
+Choa Saidan Shah,PB,Chakwal,PB-CHAKWAL,Chakwal,exact,high
+Kallar Kahar,PB,Chakwal,PB-CHAKWAL,Chakwal,fuzzy+hint,high
+Tala Gang,PB,Chakwal,PB-CHAKWAL,Chakwal,exact,high
+Bhawana,PB,Jhang,PB-CHINIOT,Chiniot,exact,high
+Chiniot,PB,Jhang,PB-CHINIOT,Chiniot,exact,high
+Lalian,PB,Jhang,PB-CHINIOT,Chiniot,exact,high
+De-Excluded Area D.G.Khan,PB,Dera Ghazi Khan,PB-DERA-GHAZI-KHAN,Dera Ghazi Khan,override,high
+Dera Ghazi Khan,PB,Dera Ghazi Khan,PB-DERA-GHAZI-KHAN,Dera Ghazi Khan,exact,high
+Taunsa,PB,Dera Ghazi Khan,PB-DERA-GHAZI-KHAN,Dera Ghazi Khan,exact,high
+Chak Jhumra,PB,Faisalabad,PB-FAISALABAD,Faisalabad,exact,high
+Faisalabad City,PB,Faisalabad,PB-FAISALABAD,Faisalabad,exact,high
+Faisalabad Saddar,PB,Faisalabad,PB-FAISALABAD,Faisalabad,fuzzy+hint,high
+Jaranwala,PB,Faisalabad,PB-FAISALABAD,Faisalabad,exact,high
+Samundari,PB,Faisalabad,PB-FAISALABAD,Faisalabad,fuzzy+hint,high
+Tandlianwala,PB,Faisalabad,PB-FAISALABAD,Faisalabad,exact,high
+Gujranwala,PB,Gujranwala,PB-GUJRANWALA,Gujranwala,fuzzy+hint,high
+Gujranwala City,PB,Gujranwala,PB-GUJRANWALA,Gujranwala,exact,high
+Kamoke,PB,Gujranwala,PB-GUJRANWALA,Gujranwala,exact,high
+Nowshera Virkhan,PB,Gujranwala,PB-GUJRANWALA,Gujranwala,fuzzy+hint,high
+Wazirabad,PB,Gujranwala,PB-GUJRANWALA,Gujranwala,exact,high
+Gujrat,PB,Gujrat,PB-GUJRAT,Gujrat,exact,high
+Kharian,PB,Gujrat,PB-GUJRAT,Gujrat,exact,high
+Sarai Alamgir,PB,Gujrat,PB-GUJRAT,Gujrat,exact,high
+Hafizabad,PB,Hafizabad,PB-HAFIZABAD,Hafizabad,exact,high
+Pindi Bhattian,PB,Hafizabad,PB-HAFIZABAD,Hafizabad,exact,high
+18-Hazari,PB,Jhang,PB-JHANG,Jhang,exact,high
+Ahmedpur Sial,PB,Jhang,PB-JHANG,Jhang,fuzzy+hint,high
+Jhang,PB,Jhang,PB-JHANG,Jhang,exact,high
+Shorkot,PB,Jhang,PB-JHANG,Jhang,exact,high
+Dina,PB,Jhelum,PB-JHELUM,Jhelum,exact,high
+Jhelum,PB,Jhelum,PB-JHELUM,Jhelum,exact,high
+Pind Dadan Khan,PB,Jhelum,PB-JHELUM,Jhelum,exact,high
+Sohawa,PB,Jhelum,PB-JHELUM,Jhelum,exact,high
+Chunian,PB,Kasur,PB-KASUR,Kasur,exact,high
+Kasur,PB,Kasur,PB-KASUR,Kasur,exact,high
+Kot Radha Kishan,PB,Kasur,PB-KASUR,Kasur,exact,high
+Pattoki,PB,Kasur,PB-KASUR,Kasur,exact,high
+Jahanian,PB,Khanewal,PB-KHANEWAL,Khanewal,exact,high
+Kabirwala,PB,Khanewal,PB-KHANEWAL,Khanewal,exact,high
+Khanewal,PB,Khanewal,PB-KHANEWAL,Khanewal,exact,high
+Mian Channu,PB,Khanewal,PB-KHANEWAL,Khanewal,exact,high
+Khushab,PB,Khushab,PB-KHUSHAB,Khushab,exact,high
+Noorpur,PB,Khushab,PB-KHUSHAB,Khushab,exact,high
+Qaidabad,PB,Khushab,PB-KHUSHAB,Khushab,fuzzy+hint,high
+Lahore Cantt,PB,Lahore,PB-LAHORE,Lahore,exact,high
+Lahore City,PB,Lahore,PB-LAHORE,Lahore,exact,high
+Chaubara,PB,Layyah,PB-LAYYAH,Layyah,fuzzy+hint,high
+Karor Lal Esan,PB,Layyah,PB-LAYYAH,Layyah,exact,high
+Layyah,PB,Layyah,PB-LAYYAH,Layyah,exact,high
+Dunya Pur,PB,Lodhran,PB-LODHRAN,Lodhran,exact,high
+Karorpacca,PB,Lodhran,PB-LODHRAN,Lodhran,fuzzy+hint,high
+Lodhran,PB,Lodhran,PB-LODHRAN,Lodhran,exact,high
+Malakwal,PB,Mandi Bahauddin,PB-MANDI-BAHAUDDIN,Mandi Bahauddin,exact,high
+Mandi Bahauddin,PB,Mandi Bahauddin,PB-MANDI-BAHAUDDIN,Mandi Bahauddin,exact,high
+Phalia,PB,Mandi Bahauddin,PB-MANDI-BAHAUDDIN,Mandi Bahauddin,exact,high
+Isakhel,PB,Mianwali,PB-MIANWALI,Mianwali,exact,high
+Mianwali,PB,Mianwali,PB-MIANWALI,Mianwali,exact,high
+Piplan,PB,Mianwali,PB-MIANWALI,Mianwali,exact,high
+Jalalpur Pirwala,PB,Multan,PB-MULTAN,Multan,exact,high
+Multan City,PB,Multan,PB-MULTAN,Multan,exact,high
+Multan Saddar,PB,Multan,PB-MULTAN,Multan,exact,high
+Shujabad,PB,Multan,PB-MULTAN,Multan,exact,high
+Alipur,PB,Muzaffargarh,PB-MUZAFFARGARH,Muzaffargarh,exact,high
+Jatoi,PB,Muzaffargarh,PB-MUZAFFARGARH,Muzaffargarh,exact,high
+Kot Addu,PB,Muzaffargarh,PB-MUZAFFARGARH,Muzaffargarh,exact,high
+Muzaffargarh,PB,Muzaffargarh,PB-MUZAFFARGARH,Muzaffargarh,exact,high
+Nankana Sahab,PB,Sheikhpura,PB-NANKANA-SAHIB,Nankana Sahib,override,high
+Shah Kot,PB,Sheikhpura,PB-NANKANA-SAHIB,Nankana Sahib,exact,high
+Shangla Hill,PB,Sheikhpura,PB-NANKANA-SAHIB,Nankana Sahib,override,high
+Narowal,PB,Narowal,PB-NAROWAL,Narowal,exact,high
+Shakargarh,PB,Narowal,PB-NAROWAL,Narowal,exact,high
+Zafarwal,PB,Narowal,PB-NAROWAL,Narowal,exact,high
+Depalpur,PB,Okara,PB-OKARA,Okara,exact,high
+Okara,PB,Okara,PB-OKARA,Okara,exact,high
+Renala Khurd,PB,Okara,PB-OKARA,Okara,exact,high
+Arifwala,PB,Pakpattan,PB-PAKPATTAN,Pakpattan,exact,high
+Pak Pattan,PB,Pakpattan,PB-PAKPATTAN,Pakpattan,exact,high
+Khan Pur,PB,Rahim Yar Khan,PB-RAHIM-YAR-KHAN,Rahim Yar Khan,exact,high
+Liaqat Pur,PB,Rahim Yar Khan,PB-RAHIM-YAR-KHAN,Rahim Yar Khan,fuzzy+hint,high
+Rahim Yar Khan,PB,Rahim Yar Khan,PB-RAHIM-YAR-KHAN,Rahim Yar Khan,exact,high
+Sadiqabad,PB,Rahim Yar Khan,PB-RAHIM-YAR-KHAN,Rahim Yar Khan,exact,high
+De-Excluded Area Rajanpur,PB,Dera Ghazi Khan,PB-RAJANPUR,Rajanpur,override,high
+Jampur,PB,Rajanpur,PB-RAJANPUR,Rajanpur,exact,high
+Rajanpur,PB,Rajanpur,PB-RAJANPUR,Rajanpur,exact,high
+Rojhan,PB,Rajanpur,PB-RAJANPUR,Rajanpur,exact,high
+Gujar Khan,PB,Rawalpindi,PB-RAWALPINDI,Rawalpindi,exact,high
+Kahuta,PB,Rawalpindi,PB-RAWALPINDI,Rawalpindi,exact,high
+Kallar Sayyedan,PB,Rawalpindi,PB-RAWALPINDI,Rawalpindi,fuzzy+hint,high
+Kotli Sattian,PB,Rawalpindi,PB-RAWALPINDI,Rawalpindi,exact,high
+Murree,PB,Rawalpindi,PB-RAWALPINDI,Rawalpindi,exact,high
+Rawalpindi,PB,Rawalpindi,PB-RAWALPINDI,Rawalpindi,exact,high
+Taxila,PB,Rawalpindi,PB-RAWALPINDI,Rawalpindi,exact,high
+Chichawatni,PB,Sahiwal,PB-SAHIWAL,Sahiwal,exact,high
+Sahiwal,PB,Sahiwal,PB-SAHIWAL,Sahiwal,exact+hint,high
+Bhalwal,PB,Sargodha,PB-SARGODHA,Sargodha,exact,high
+Kot Momin,PB,Sargodha,PB-SARGODHA,Sargodha,exact,high
+Sahiwal,PB,Sargodha,PB-SARGODHA,Sargodha,exact+hint,high
+Sargodha,PB,Sargodha,PB-SARGODHA,Sargodha,exact,high
+Shahpur,PB,Sargodha,PB-SARGODHA,Sargodha,exact,high
+Sillanwali,PB,Sargodha,PB-SARGODHA,Sargodha,exact,high
+Ferozewala,PB,Sheikhpura,PB-SHEIKHUPURA,Sheikhupura,exact,high
+Muridke,PB,Sheikhpura,PB-SHEIKHUPURA,Sheikhupura,exact,high
+Safdarabad,PB,Sheikhpura,PB-SHEIKHUPURA,Sheikhupura,exact,high
+Sharak Pur,PB,Sheikhpura,PB-SHEIKHUPURA,Sheikhupura,exact,high
+Sheikhupura,PB,Sheikhpura,PB-SHEIKHUPURA,Sheikhupura,exact,high
+Daska,PB,Sialkot,PB-SIALKOT,Sialkot,exact,high
+Pasrur,PB,Sialkot,PB-SIALKOT,Sialkot,exact,high
+Sambrial,PB,Sialkot,PB-SIALKOT,Sialkot,exact,high
+Sialkot,PB,Sialkot,PB-SIALKOT,Sialkot,exact,high
+Gojra,PB,Toba Tek Singh,PB-TOBA-TEK-SINGH,Toba Tek Singh,exact,high
+Kamalia,PB,Toba Tek Singh,PB-TOBA-TEK-SINGH,Toba Tek Singh,exact,high
+Toba Tek Singh,PB,Toba Tek Singh,PB-TOBA-TEK-SINGH,Toba Tek Singh,exact,high
+Burewala,PB,Vihari,PB-VEHARI,Vehari,exact,high
+Mailsi,PB,Vihari,PB-VEHARI,Vehari,exact,high
+Vehari,PB,Vihari,PB-VEHARI,Vehari,exact,high
+Badin,SD,Badin,SD-BADIN,Badin,exact,high
+Matli,SD,Badin,SD-BADIN,Badin,exact,high
+Shaheed Fazal Rahu,SD,Badin,SD-BADIN,Badin,override,high
+Talhar,SD,Badin,SD-BADIN,Badin,exact,high
+Tando Bago,SD,Badin,SD-BADIN,Badin,exact,high
+Dadu,SD,Dadu,SD-DADU,Dadu,exact,high
+Johi,SD,Dadu,SD-DADU,Dadu,exact,high
+Khairpur Nathan Shah,SD,Dadu,SD-DADU,Dadu,exact,high
+Mehar,SD,Dadu,SD-DADU,Dadu,exact,high
+Daharki,SD,Ghotki,SD-GHOTKI,Ghotki,exact,high
+Ghotki,SD,Ghotki,SD-GHOTKI,Ghotki,exact,high
+Khangarh,SD,Ghotki,SD-GHOTKI,Ghotki,exact,high
+Mirpur Mathelo,SD,Ghotki,SD-GHOTKI,Ghotki,exact,high
+Ubauro,SD,Ghotki,SD-GHOTKI,Ghotki,exact,high
+Hyderabad,SD,Hyderabad,SD-HYDERABAD,Hyderabad,exact,high
+Latifabad,SD,Hyderabad,SD-HYDERABAD,Hyderabad,exact,high
+Qasimabad,SD,Jamshoro,SD-HYDERABAD,Hyderabad,exact,high
+Garhi Khairo,SD,Jacobabad,SD-JACOBABAD,Jacobabad,exact,high
+Thul,SD,Jacobabad,SD-JACOBABAD,Jacobabad,exact,high
+Kotri,SD,Jamshoro,SD-JAMSHORO,Jamshoro,exact,high
+Manjand,SD,Jamshoro,SD-JAMSHORO,Jamshoro,fuzzy+hint,high
+Sehwan,SD,Jamshoro,SD-JAMSHORO,Jamshoro,exact,high
+Thano Bula Khan,SD,Jamshoro,SD-JAMSHORO,Jamshoro,exact,high
+Gulberg Town,SD,Karachi,SD-KARACHI-CENTRAL,Karachi Central,override,medium
+Liaqatabad Town,SD,Karachi,SD-KARACHI-CENTRAL,Karachi Central,override,medium
+N.Nazimabad Town,SD,Karachi,SD-KARACHI-CENTRAL,Karachi Central,override,medium
+New Karachi Town,SD,Karachi,SD-KARACHI-CENTRAL,Karachi Central,override,medium
+Faisal Cantonment,SD,Karachi,SD-KARACHI-EAST,Karachi East,override,low
+Gulshan E Iqbal Town,SD,Karachi,SD-KARACHI-EAST,Karachi East,override,medium
+Jamshed Town,SD,Karachi,SD-KARACHI-EAST,Karachi East,override,medium
+Clifton Cantonment,SD,Karachi,SD-KARACHI-SOUTH,Karachi South,override,medium
+Karachi Cantonment,SD,Karachi,SD-KARACHI-SOUTH,Karachi South,override,low
+Lyari Town,SD,Karachi,SD-KARACHI-SOUTH,Karachi South,override,medium
+Saddar Town,SD,Karachi,SD-KARACHI-SOUTH,Karachi South,override,medium
+Orangi Town,SD,Karachi,SD-KARACHI-WEST,Karachi West,override,medium
+Kandhkot,SD,Kashmore,SD-KASHMORE,Kashmore,exact,high
+Kashmore,SD,Kashmore,SD-KASHMORE,Kashmore,exact,high
+Tangwani,SD,Kashmore,SD-KASHMORE,Kashmore,exact,high
+Baldia Town,SD,Karachi,SD-KEAMARI,Keamari,override,medium
+Kiamari Town,SD,Karachi,SD-KEAMARI,Keamari,override,medium
+Manora Cantonment,SD,Karachi,SD-KEAMARI,Keamari,override,medium
+Site Town,SD,Karachi,SD-KEAMARI,Keamari,override,medium
+Faiz Ganj,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Gambat,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Khairpur,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Kingri,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Kot Diji,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Mirwah,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Nara,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Sobho Dero,SD,Khairpur,SD-KHAIRPUR,Khairpur,exact,high
+Korangi Creek Cantonment,SD,Karachi,SD-KORANGI,Korangi,override,medium
+Korangi Town,SD,Karachi,SD-KORANGI,Korangi,override,medium
+Landhi Town,SD,Karachi,SD-KORANGI,Korangi,override,medium
+Shah Faisal Town,SD,Karachi,SD-KORANGI,Korangi,override,medium
+Bakrani Taluks,SD,Qambar Shahdadkot,SD-LARKANA,Larkana,override,high
+Dokri,SD,Qambar Shahdadkot,SD-LARKANA,Larkana,exact,high
+Larkana,SD,Qambar Shahdadkot,SD-LARKANA,Larkana,exact,high
+Ratodero,SD,Qambar Shahdadkot,SD-LARKANA,Larkana,exact,high
+Bin Qasim Town,SD,Karachi,SD-MALIR,Malir,override,medium
+Gadap Town,SD,Karachi,SD-MALIR,Malir,override,medium
+Malir,SD,Karachi,SD-MALIR,Malir,override,medium
+Malir Cantonment,SD,Karachi,SD-MALIR,Malir,override,medium
+Hala,SD,Matiari,SD-MATIARI,Matiari,exact,high
+Matiari,SD,Hyderabad,SD-MATIARI,Matiari,exact,high
+Saeedabad,SD,Matiari,SD-MATIARI,Matiari,exact,high
+Digri,SD,Mirpurkhas,SD-MIRPUR-KHAS,Mirpur Khas,exact,high
+Hussain Bux Mari,SD,Mirpurkhas,SD-MIRPUR-KHAS,Mirpur Khas,exact,high
+Jhudo,SD,Mirpurkhas,SD-MIRPUR-KHAS,Mirpur Khas,exact,high
+Kot Ghulam Muhammad,SD,Mirpurkhas,SD-MIRPUR-KHAS,Mirpur Khas,exact,high
+Mirpurkhas,SD,Mirpurkhas,SD-MIRPUR-KHAS,Mirpur Khas,exact,high
+Sindhri,SD,Sanghar,SD-MIRPUR-KHAS,Mirpur Khas,exact,high
+Bhiria,SD,Naushehro Feroze,SD-NAUSHAHRO-FEROZE,Naushahro Feroze,exact,high
+Kandiaro,SD,Naushehro Feroze,SD-NAUSHAHRO-FEROZE,Naushahro Feroze,exact,high
+Mehrabpur,SD,Naushehro Feroze,SD-NAUSHAHRO-FEROZE,Naushahro Feroze,exact,high
+Moro,SD,Naushehro Feroze,SD-NAUSHAHRO-FEROZE,Naushahro Feroze,exact,high
+Naushahro Feroze,SD,Naushehro Feroze,SD-NAUSHAHRO-FEROZE,Naushahro Feroze,exact,high
+Kambar Ali Khan,SD,Qambar Shahdadkot,SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,exact,high
+Miro Khan,SD,Qambar Shahdadkot,SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,exact,high
+Nasirabad,SD,Qambar Shahdadkot,SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,exact,high
+Qubo Saeed Khan,SD,Qambar Shahdadkot,SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,exact,high
+Shahdad Kot,SD,Qambar Shahdadkot,SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,exact,high
+Sijawal Junejo,SD,Qambar Shahdadkot,SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,fuzzy+hint,high
+Warah,SD,Qambar Shahdadkot,SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,exact,high
+Jam Nawaz Ali,SD,Sanghar,SD-SANGHAR,Sanghar,exact,high
+Khipro,SD,Sanghar,SD-SANGHAR,Sanghar,exact,high
+Sanghar,SD,Sanghar,SD-SANGHAR,Sanghar,exact,high
+Shahdadpur,SD,Sanghar,SD-SANGHAR,Sanghar,exact,high
+Sinjhoro,SD,Sanghar,SD-SANGHAR,Sanghar,exact,high
+Tando Adam,SD,Sanghar,SD-SANGHAR,Sanghar,exact,high
+Daur,SD,Nawabshah,SD-SHAHEED-BENAZIRABAD,Shaheed Benazirabad,exact,high
+Kazi Ahmed,SD,Nawabshah,SD-SHAHEED-BENAZIRABAD,Shaheed Benazirabad,exact,high
+Nawabshah,SD,Nawabshah,SD-SHAHEED-BENAZIRABAD,Shaheed Benazirabad,exact,high
+Sakrand,SD,Nawabshah,SD-SHAHEED-BENAZIRABAD,Shaheed Benazirabad,exact,high
+Garhi Yasin,SD,Shikarpur,SD-SHIKARPUR,Shikarpur,exact,high
+Khanpur,SD,Shikarpur,SD-SHIKARPUR,Shikarpur,exact,high
+Lakhi,SD,Shikarpur,SD-SHIKARPUR,Shikarpur,exact,high
+Shikarpur,SD,Shikarpur,SD-SHIKARPUR,Shikarpur,exact,high
+Jati,SD,Thatta,SD-SUJAWAL,Sujawal,exact,high
+Kharo Chan,SD,Thatta,SD-SUJAWAL,Sujawal,exact,high
+Mirpur Bathoro,SD,Thatta,SD-SUJAWAL,Sujawal,exact,high
+Shah Bunder,SD,Thatta,SD-SUJAWAL,Sujawal,exact,high
+Sujawal,SD,Thatta,SD-SUJAWAL,Sujawal,exact,high
+New Sukkur,SD,Shikarpur,SD-SUKKUR,Sukkur,exact,high
+Pano Aqil,SD,Sukkur,SD-SUKKUR,Sukkur,exact,high
+Rohri,SD,Sukkur,SD-SUKKUR,Sukkur,exact,high
+Salehpat,SD,Sukkur,SD-SUKKUR,Sukkur,exact,high
+Sukkur,SD,Sukkur,SD-SUKKUR,Sukkur,fuzzy+hint,high
+Chamber,SD,Tando Allahyar,SD-TANDO-ALLAHYAR,Tando Allahyar,exact,high
+Jhando Mari,SD,Tando Allahyar,SD-TANDO-ALLAHYAR,Tando Allahyar,exact,high
+Tando Allah Yar,SD,Tando Allahyar,SD-TANDO-ALLAHYAR,Tando Allahyar,fuzzy+hint,high
+Bulri Shah Karim,SD,Tando Muhammad Khan,SD-TANDO-MUHAMMAD-KHAN,Tando Muhammad Khan,exact,high
+Tando Gulam Hyder,SD,Tando Muhammad Khan,SD-TANDO-MUHAMMAD-KHAN,Tando Muhammad Khan,fuzzy+hint,high
+Tando Muhammad Khan,SD,Hyderabad,SD-TANDO-MUHAMMAD-KHAN,Tando Muhammad Khan,override,high
+Chachro,SD,Tharparkar,SD-THARPARKAR,Tharparkar,exact,high
+Diplo,SD,Tharparkar,SD-THARPARKAR,Tharparkar,exact,high
+Mithi,SD,Tharparkar,SD-THARPARKAR,Tharparkar,exact,high
+Nagar Parkar,SD,Tharparkar,SD-THARPARKAR,Tharparkar,exact,high
+Ghorabari,SD,Thatta,SD-THATTA,Thatta,exact,high
+Keti Bunder,SD,Thatta,SD-THATTA,Thatta,exact,high
+Mirpur Sakro,SD,Thatta,SD-THATTA,Thatta,exact,high
+Thatta,SD,Thatta,SD-THATTA,Thatta,exact,high
+Kunri,SD,Umerkot,SD-UMERKOT,Umerkot,exact,high
+Pithoro,SD,Umerkot,SD-UMERKOT,Umerkot,exact,high
+Samaro,SD,Umerkot,SD-UMERKOT,Umerkot,exact,high
+Umer Kot,SD,Umerkot,SD-UMERKOT,Umerkot,exact,high

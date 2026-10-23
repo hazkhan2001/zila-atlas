@@ -1,0 +1,24 @@
+Boundaries: District shapes built by merging 2017 census tehsils (Pathways Data Pvt. Ltd., via geoBoundaries gbOpen PAK ADM3, Open Database License 1.0) into 2023 census districts. Province hints from geoBoundaries ADM1/ADM2 (public domain).
+Tehsils: 553 assigned, 1 special area(s)
+Assignment method counts:
+method
+exact         376
+override       79
+fuzzy+hint     74
+hint_layer     19
+exact+hint      5
+
+Districts per province:
+province_code
+BA    34
+GB    10
+IS     1
+JK    10
+KP    35
+PB    36
+SD    30
+
+Total districts: 156
+Census districts without a shape: 0 []
+Districts with low-confidence outlines: Jaffarabad, Zhob, Karachi East, Karachi South
+Special areas: ['Disputed Territory']

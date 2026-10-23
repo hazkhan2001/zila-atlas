@@ -1,0 +1,18 @@
+indicator_id,label,category,value,unit,period,source_name,source_url,notes,confidence
+gdp_nominal_usd,GDP,Output and income,450.4,USD billion,FY2025-26,PBS National Accounts Committee (19 Oct 2026),https://www.pbs.gov.pk/?p=29660,Up from USD 408.7 billion in FY2024-25; provisional,high
+gdp_nominal_pkr,GDP in rupees,Output and income,126.4,PKR trillion,FY2025-26,PBS National Accounts Committee (reported),https://www.brecorder.com/news/40445052,Revised in October 2026 from Rs 126.9 trillion,medium
+gdp_growth,Real GDP growth,Output and income,3.65,%,FY2025-26,PBS National Accounts Committee (19 Oct 2026),https://www.pbs.gov.pk/?p=29660,Revised from 3.70% in May; provisional,high
+gdp_growth_prev,Real GDP growth a year earlier,Output and income,3.11,%,FY2024-25,PBS National Accounts Committee (reported),https://www.brecorder.com/news/40445052,Revised,medium
+gdp_per_capita_usd,Income per person,Output and income,1896,USD,FY2025-26,PBS National Accounts Committee (19 Oct 2026),https://www.pbs.gov.pk/?p=29660,"Rs 531,897; based on Census 2023 population",high
+gdp_ppp,GDP at purchasing power parity,Output and income,1677.7,international $ billion,2025 (calendar year),World Bank World Development Indicators,https://api.worldbank.org/v2/country/PAK/indicator/NY.GDP.MKTP.PP.CD?format=json&date=2022:2025,Adjusts for lower prices in Pakistan than in the US,high
+gdp_per_capita_ppp,Income per person at PPP,Output and income,6573,international $,2025 (calendar year),World Bank World Development Indicators,https://api.worldbank.org/v2/country/PAK/indicator/NY.GDP.PCAP.PP.CD?format=json&date=2022:2025,,high
+share_agriculture,Agriculture share of GDP,Output and income,23.4,%,FY2025-26,Pakistan Economic Survey 2025-26,https://www.finance.gov.pk/survey/chapter_26/1_Growth_and_Investment.pdf,At constant prices,high
+share_industry,Industry share of GDP,Output and income,18.1,%,FY2025-26,Pakistan Economic Survey 2025-26,https://www.finance.gov.pk/survey/chapter_26/1_Growth_and_Investment.pdf,At constant prices,high
+share_services,Services share of GDP,Output and income,58.4,%,FY2025-26,Pakistan Economic Survey 2025-26,https://www.finance.gov.pk/survey/chapter_26/1_Growth_and_Investment.pdf,At constant prices,high
+fiscal_deficit_gdp,Fiscal deficit,Fiscal,2.6,% of GDP,FY2025-26,Finance Division fiscal operations,https://www.finance.gov.pk/fiscal/july_june_2025_26.pdf,"Rs 3.31 trillion; federal and provincial combined; lowest since FY2018",high
+primary_balance_gdp,Primary surplus (before interest),Fiscal,2.9,% of GDP,FY2025-26,Finance Division fiscal operations,https://www.finance.gov.pk/fiscal/july_june_2025_26.pdf,Rs 3.63 trillion,high
+fbr_tax,Federal tax collection (FBR),Fiscal,13.01,PKR trillion,FY2025-26,Finance Division fiscal operations,https://www.finance.gov.pk/fiscal/july_june_2025_26.pdf,Budget target was Rs 14.13 trillion,high
+tax_to_gdp,Tax revenue to GDP,Fiscal,11.2,% of GDP,FY2025-26,Finance Division fiscal operations,https://www.finance.gov.pk/fiscal/july_june_2025_26.pdf,Federal and provincial taxes; FBR alone is 10.3%,high
+rating_moodys,Moody's rating,Credit ratings,B3,rating,Upgraded 24 Aug 2026,Business Recorder,https://www.brecorder.com/news/40436306,"Outlook stable; previously Caa1",medium
+rating_sp,S&P Global rating,Credit ratings,B,rating,Upgraded Jul 2026,Profit (Pakistan Today),https://profit.pakistantoday.com.pk/2026/07/22/sandp-upgrades-pakistans-sovereign-credit-rating-to-b-on-imf-backed-reforms,"Outlook stable; previously B-",medium
+rating_fitch,Fitch rating,Credit ratings,B-,rating,Affirmed Apr 2026,Nukta,https://nukta.com/fitch-affirms-pakistan-rating-at-b-with-stable-outlook,"Outlook stable; upgraded from CCC+ in April 2025",medium

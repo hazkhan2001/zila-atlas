@@ -1,0 +1,25 @@
+firm_name,group_name,entity_type,psx_ticker,sector,hq_city,hq_province_code,operating_province_codes,fiscal_year_end,revenue_pkr_mn,total_assets_pkr_mn,basis,source_url,confidence,notes,last_verified
+Sui Northern Gas Pipelines,,soe_listed,SNGP,Gas distribution,Lahore,PB,PB;KP;IS,2025-06-30,1408551,,Sales per PSX data portal; treatment of tariff adjustment not stated,https://dps.psx.com.pk/dataportal/company/SNGP,medium,FY2026 results not yet published (AGM extension filed),2026-10-22
+Attock Petroleum,Attock Group,listed,APL,Oil marketing,Rawalpindi,PB,,2026-06-30,533097,,Net sales,https://dps.psx.com.pk/company/APL,high,Mettis reports net sales Rs 533.10 bn,2026-10-22
+Fauji Fertilizer Company,Fauji Foundation,listed,FFC,Fertilizer,Rawalpindi,PB,PB;SD,2025-12-31,432410,,Net turnover,https://dps.psx.com.pk/company/FFC,high,Includes merged Fauji Fertilizer Bin Qasim (Karachi plant),2026-10-22
+Attock Refinery,Attock Group,listed,ATRL,Oil refining,Rawalpindi,PB,PB,2026-06-30,341589,,Net sales,https://dps.psx.com.pk/company/ATRL,high,"Refinery at Morgah, Rawalpindi",2026-10-22
+Atlas Honda,Atlas Group,listed,ATLH,Motorcycles,Lahore,PB,,2026-03-31,273927,,Net sales (PSX data portal),https://dps.psx.com.pk/company/ATLH,medium,March year-end,2026-10-22
+Nestle Pakistan,Nestle,foreign_subsidiary,NESTLE,Food and beverages,Lahore,PB,,2025-12-31,199069,,Net sales,https://dps.psx.com.pk/company/NESTLE,high,Mettis reports the same figure,2026-10-22
+Sazgar Engineering Works,,listed,SAZEW,Automobiles,Lahore,PB,PB,2026-06-30,191715,,Net sales (PSX data portal),https://dps.psx.com.pk/company/SAZEW,medium,,2026-10-22
+Interloop,,listed,ILP,Textiles,Faisalabad,PB,PB,2026-06-30,182843,,"Net sales, unconsolidated",https://dps.psx.com.pk/company/ILP,high,"Consolidated 187,698",2026-10-22
+Nishat Mills,Nishat Group,listed,NML,Textiles,Lahore,PB,PB,2026-06-30,181645,,"Net sales, unconsolidated",https://dps.psx.com.pk/company/NML,high,,2026-10-22
+Fatima Fertilizer,Fatima Group,listed,FATIMA,Fertilizer,Lahore,PB,PB,2025-12-31,170058,,"Net sales, unconsolidated (consolidated 276,200)",https://dps.psx.com.pk/company/FATIMA,high,Multan plant moved to a subsidiary,2026-10-22
+Honda Atlas Cars,Atlas Group,listed,HCAR,Automobiles,Lahore,PB,PB,2026-03-31,122283,,Net sales,https://dps.psx.com.pk/company/HCAR,high,March year-end,2026-10-22
+Bestway Cement,Bestway Group,listed,BWCL,Cement,Islamabad,IS,,2026-06-30,108282,,"Net sales (gross 172,340)",https://dps.psx.com.pk/company/BWCL,high,,2026-10-22
+Ibrahim Fibres,Ibrahim Group,listed,IBFL,Textiles,Lahore,PB,,2025-12-31,104457,,Net sales (PSX data portal),https://dps.psx.com.pk/company/IBFL,medium,,2026-10-22
+Fauji Cement,Fauji Foundation,listed,FCCL,Cement,Rawalpindi,PB,PB,2026-06-30,93690,,Net sales,https://dps.psx.com.pk/company/FCCL,high,,2026-10-22
+Nishat (Chunian),Nishat Group,listed,NCL,Textiles,Lahore,PB,PB,2026-06-30,86825,,Net sales (PSX data portal),https://dps.psx.com.pk/company/NCL,medium,,2026-10-22
+D.G. Khan Cement,Nishat Group,listed,DGKC,Cement,Lahore,PB,PB,2026-06-30,79563,,Net sales,https://dps.psx.com.pk/company/DGKC,high,,2026-10-22
+Mughal Iron and Steel,,listed,MUGHAL,Steel,Lahore,PB,PB,2026-06-30,77958,,Net sales (PSX data portal),https://dps.psx.com.pk/company/MUGHAL,medium,,2026-10-22
+Maple Leaf Cement,Kohinoor Maple Leaf Group,listed,MLCF,Cement,Lahore,PB,PB,2026-06-30,70732,,"Net sales, unconsolidated",https://dps.psx.com.pk/company/MLCF,high,,2026-10-22
+Millat Tractors,Millat Group,listed,MTL,Tractors,Lahore,PB,PB,2026-06-30,63755,,"Sales, likely unconsolidated",https://dps.psx.com.pk/company/MTL,medium,Address on Sheikhupura Road,2026-10-22
+Pak Elektron,Saigol Group,listed,PAEL,Electrical appliances,Lahore,PB,PB,2025-12-31,63524,,Net sales (PSX data portal),https://dps.psx.com.pk/company/PAEL,medium,,2026-10-22
+Pakistan Oilfields,Attock Group,listed,POL,Oil and gas exploration,Rawalpindi,PB,,2026-06-30,63033,,"Net sales, likely unconsolidated",https://dps.psx.com.pk/company/POL,medium,"Mettis gives 64,248, basis unlabelled",2026-10-22
+Kohat Cement,,listed,KOHC,Cement,Kohat,KP,KP,2026-06-30,38531,,Net sales,https://dps.psx.com.pk/company/KOHC,medium,Registered and plant address in Kohat; head office not separately verified,2026-10-22
+Cherat Cement,Ghulam Faruque Group,listed,CHCC,Cement,Nowshera,KP,KP,2026-06-30,36483,,Net sales,https://dps.psx.com.pk/company/CHCC,low,Registered and plant address in Nowshera; group head office may be elsewhere,2026-10-22
+Kot Addu Power Company,,listed,KAPCO,Power generation,Islamabad,IS,PB,2026-06-30,19162,,"Revenue, standalone",https://dps.psx.com.pk/company/KAPCO,medium,"Plant at Kot Addu, Punjab",2026-10-22

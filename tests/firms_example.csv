@@ -1,0 +1,6 @@
+firm_id,firm_name,group_name,entity_type,psx_ticker,secp_cuin,sector,hq_province_code,hq_district_id,operating_province_codes,fiscal_year_end,revenue_status,revenue_pkr_mn,total_assets_pkr_mn,market_cap_pkr_mn,market_cap_date,source,confidence,last_verified,notes
+EX1,Example Energy Ltd,Example Group,soe_listed,EXEN,,Oil & Gas,IS,IS-ISLAMABAD,SD;BA;KP,2025-06-30,reported,400000,,900000,2026-10-01,FAKE example annual report,high,2026-10-22,FICTIONAL TEST ROW
+EX2,Example Bank Ltd,,listed,EXBK,,Banking,SD,SD-KARACHI,PB;SD;KP;BA;IS,2025-12-31,reported,300000,,500000,2026-10-01,FAKE example annual report,high,2026-10-22,FICTIONAL TEST ROW
+EX3,Example Textiles Ltd,Example Group,listed,EXTX,,Textiles,PB,PB-FAISALABAD,PB,2025-06-30,reported,150000,,80000,2026-10-01,FAKE example annual report,high,2026-10-22,FICTIONAL TEST ROW
+EX4,Example Foods (Pvt) Ltd,,private,,0000001,Food,PB,PB-LAHORE,PB;SD,,undisclosed,,,,,SECP registry lookup (fake),medium,2026-10-22,FICTIONAL TEST ROW
+EX5,Example Cement Ltd,,listed,EXCM,,Cement,KP,KP-NOWSHERA,KP;PB,2025-06-30,reported,90000,,60000,2026-10-01,FAKE example annual report,high,2026-10-22,FICTIONAL TEST ROW

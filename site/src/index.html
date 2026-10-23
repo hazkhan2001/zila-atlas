@@ -1,0 +1,1379 @@
+<meta charset="utf-8">
+<title>Zila Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="District-level data for Pakistan: Census 2023 indicators for every district, mapped and compared, plus the largest companies by province.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Nastaliq+Urdu:wght@500&display=swap">
+<style>/*__MAPLIBRE_CSS__*/</style>
+<style>
+/* Layout concept: an atlas workbench. One sticky bar with the four views;
+   the map view is a two-pane desk (map left, reading panel right) that
+   stacks on phones. Neutrals carry a faint green cast; flag green is the
+   only accent; the map's sequential ramp is the one loud thing. */
+:root {
+  --bg: #f4f6f2;
+  --surface: #fcfdfb;
+  --surface-2: #eef1ec;
+  --ink: #142019;
+  --ink-2: #44514a;
+  --muted: #6c7871;
+  --line: #d9dfd7;
+  --line-strong: #b9c3ba;
+  --accent: #0b5a35;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcebe0;
+  --highlight: #c2410c;
+  --nodata: #cfd5cd;
+  --special: #e3e0d8;
+  --map-bg: #e9ede7;
+  --ramp-0: #e2eee0;
+  --ramp-1: #b9d9bd;
+  --ramp-2: #87bf98;
+  --ramp-3: #56a176;
+  --ramp-4: #2c7d57;
+  --ramp-5: #0d5537;
+  --warn-bg: #fbf1dc;
+  --warn-ink: #6b4a06;
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-urdu: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: 2rem;
+  --radius: 6px;
+  --bar-h: 56px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1411; --surface: #141b17; --surface-2: #1b241f; --ink: #e6ede8;
+    --ink-2: #b5c2ba; --muted: #8b988f; --line: #26302a; --line-strong: #3a463f;
+    --accent: #6cc495; --accent-ink: #08130d; --accent-soft: #1d3326;
+    --highlight: #fb923c; --nodata: #2c3530; --special: #2a2925; --map-bg: #111814;
+    --ramp-0: #1d3327; --ramp-1: #24513a; --ramp-2: #2f7350; --ramp-3: #4a9a6c;
+    --ramp-4: #7cc192; --ramp-5: #bfe6c4; --warn-bg: #3a2e12; --warn-ink: #f3d79a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1411; --surface: #141b17; --surface-2: #1b241f; --ink: #e6ede8;
+  --ink-2: #b5c2ba; --muted: #8b988f; --line: #26302a; --line-strong: #3a463f;
+  --accent: #6cc495; --accent-ink: #08130d; --accent-soft: #1d3326;
+  --highlight: #fb923c; --nodata: #2c3530; --special: #2a2925; --map-bg: #111814;
+  --ramp-0: #1d3327; --ramp-1: #24513a; --ramp-2: #2f7350; --ramp-3: #4a9a6c;
+  --ramp-4: #7cc192; --ramp-5: #bfe6c4; --warn-bg: #3a2e12; --warn-ink: #f3d79a;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: var(--step-0); line-height: 1.5;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--surface);
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; text-wrap: balance; margin: 0; line-height: 1.15; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.num { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.bar-inner { display: flex; align-items: center; gap: 24px; min-height: var(--bar-h); flex-wrap: wrap; }
+.brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand-name { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; letter-spacing: -0.01em; }
+.brand-urdu { font-family: var(--font-urdu); font-size: 1.05rem; color: var(--accent); line-height: 1; }
+.tabs { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; }
+.tab {
+  border: 0; background: none; padding: 8px 12px; border-radius: var(--radius); cursor: pointer;
+  color: var(--ink-2); font-weight: 500; white-space: nowrap;
+}
+.tab:hover { background: var(--surface-2); color: var(--ink); }
+.tab[aria-selected="true"] { color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); border-radius: var(--radius) var(--radius) 0 0; }
+
+/* ---------- views ---------- */
+main { display: block; }
+.view[hidden] { display: none !important; }
+.page {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 64px;
+  max-width: 1180px; margin: 0 auto;
+}
+.page-head { display: grid; gap: 8px; margin-bottom: 24px; max-width: 68ch; }
+.page-head h1 { font-size: var(--step-3); }
+.page-head p { color: var(--ink-2); }
+
+/* ---------- map view ---------- */
+.desk { display: grid; grid-template-columns: minmax(0, 1fr) 420px; height: calc(100vh - var(--bar-h) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); min-height: 560px; }
+.map-wrap { position: relative; min-width: 0; background: var(--map-bg); }
+#map { position: absolute; inset: 0; }
+.map-fallback { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); padding: 24px; text-align: center; }
+.map-tools {
+  position: absolute; left: 12px; top: 12px; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap;
+  max-width: calc(100% - 24px);
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line); font-size: var(--step--1); cursor: pointer;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06);
+}
+.chip input { accent-color: var(--accent); margin: 0; }
+.tooltip {
+  position: absolute; z-index: 3; pointer-events: none; background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: var(--radius); padding: 8px 10px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.14); font-size: var(--step--1); max-width: 260px;
+}
+.tooltip strong { font-family: var(--font-display); font-size: 1rem; font-weight: 600; display: block; }
+.tooltip .tt-val { font-family: var(--font-data); font-size: var(--step-0); }
+
+.panel { background: var(--surface); border-left: 1px solid var(--line); overflow-y: auto; min-width: 0; display: flex; flex-direction: column; }
+.panel-sec { padding: 18px 20px; border-bottom: 1px solid var(--line); display: grid; gap: 12px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: var(--step--1); color: var(--muted); font-weight: 500; }
+.select, .input {
+  width: 100%; padding: 8px 10px; border: 1px solid var(--line-strong); border-radius: var(--radius);
+  background: var(--surface); min-height: 40px;
+}
+.ind-desc { color: var(--ink-2); font-size: var(--step--1); }
+.legend { display: grid; gap: 6px; }
+.legend-scale { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; }
+.legend-scale span { height: 12px; }
+.legend-scale span:first-child { border-radius: 3px 0 0 3px; }
+.legend-scale span:last-child { border-radius: 0 3px 3px 0; }
+.legend-ticks { display: grid; grid-template-columns: repeat(6, 1fr); font-family: var(--font-data); font-size: 0.6875rem; color: var(--muted); }
+.legend-ticks span { white-space: nowrap; }
+.legend-extra { display: flex; gap: 14px; flex-wrap: wrap; font-size: var(--step--1); color: var(--muted); }
+.swatch { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -1px; margin-right: 5px; }
+.national { display: flex; justify-content: space-between; gap: 12px; font-size: var(--step--1); color: var(--ink-2); }
+
+.detail-empty { color: var(--muted); padding: 20px; display: grid; gap: 10px; }
+.detail-empty ul { margin: 0; padding-left: 18px; }
+.d-head { display: grid; gap: 4px; }
+.d-head h2 { font-size: var(--step-3); }
+.d-prov { color: var(--ink-2); }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.badge { font-size: 0.75rem; padding: 2px 8px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line); }
+.badge.warn { background: var(--warn-bg); color: var(--warn-ink); border-color: transparent; }
+.note { background: var(--warn-bg); color: var(--warn-ink); border-radius: var(--radius); padding: 10px 12px; font-size: var(--step--1); }
+.keystats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.keystat { background: var(--surface); padding: 10px 12px; display: grid; gap: 2px; }
+.keystat .k { font-size: 0.75rem; color: var(--muted); }
+.keystat .v { font-family: var(--font-data); font-size: 1.125rem; font-weight: 500; }
+.keystat .c { font-size: 0.75rem; color: var(--ink-2); }
+.ind-group h3 { font-family: var(--font-body); font-size: var(--step--1); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.ind-table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+.ind-table th { text-align: right; font-weight: 500; color: var(--muted); font-size: 0.6875rem; padding: 4px 0 4px 8px; }
+.ind-table th:first-child { text-align: left; padding-left: 0; }
+.ind-table td { padding: 6px 0 6px 8px; border-top: 1px solid var(--line); text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ind-table td:first-child { text-align: left; padding-left: 0; font-family: var(--font-body); white-space: normal; }
+.ind-table tr.is-current td:first-child { font-weight: 600; color: var(--accent); }
+.ind-table tr { cursor: pointer; }
+.ind-table tr:hover td { background: var(--surface-2); }
+.rankbar { display: inline-block; position: relative; width: 44px; height: 6px; background: var(--surface-2); border-radius: 3px; vertical-align: middle; }
+.rankbar i { position: absolute; top: -2px; width: 3px; height: 10px; border-radius: 2px; background: var(--ink-2); }
+.cmp-muted { color: var(--muted); }
+
+/* ---------- compare view ---------- */
+.controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; margin-bottom: 16px; }
+.controls .field { min-width: 220px; flex: 1 1 220px; }
+.plot-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; position: relative; }
+.plot-meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; color: var(--ink-2); font-size: var(--step--1); }
+#scatter { width: 100%; display: block; }
+#scatter text { fill: var(--muted); font-family: var(--font-data); font-size: 11px; }
+#scatter .axis-title { fill: var(--ink-2); font-family: var(--font-body); font-size: 12px; }
+#scatter .grid line { stroke: var(--line); }
+#scatter .domain { stroke: var(--line-strong); }
+#scatter .tick line { stroke: var(--line-strong); }
+.dot { fill: var(--muted); fill-opacity: 0.55; stroke: var(--surface); stroke-width: 1; }
+.dot.in-prov { fill-opacity: 0.9; }
+.dot.in-prov { fill: var(--accent); }
+.dot.sel { fill: var(--highlight); stroke: var(--ink); stroke-width: 1.5; }
+.dot-label { fill: var(--ink) !important; font-family: var(--font-body) !important; font-size: 12px !important; font-weight: 600; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+.split { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.rank-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.rank-card header { padding: 12px 14px; border-bottom: 1px solid var(--line); display: grid; gap: 2px; }
+.rank-scroll { max-height: 560px; overflow: auto; }
+.rank-table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+.rank-table th { position: sticky; top: 0; background: var(--surface); text-align: left; font-weight: 500; color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--line); cursor: pointer; white-space: nowrap; }
+.rank-table td { padding: 6px 10px; border-bottom: 1px solid var(--line); }
+.rank-table td.r, .rank-table th.r { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+.rank-table tr { cursor: pointer; }
+.rank-table tr:hover td { background: var(--surface-2); }
+.rank-table tr.sel td { background: var(--accent-soft); }
+
+/* ---------- firms view ---------- */
+.seg { display: inline-flex; border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; }
+.seg button { border: 0; background: var(--surface); padding: 8px 14px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.prov-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+.prov-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); display: grid; align-content: start; }
+.prov-card > header { padding: 14px 16px 10px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.prov-card h2 { font-size: 1.375rem; }
+.prov-card .code { font-family: var(--font-data); color: var(--muted); font-size: var(--step--1); }
+.firm-list { list-style: none; margin: 0; padding: 0 16px 14px; display: grid; gap: 0; }
+.firm-list h3 { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 10px 0 4px; }
+.firm { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 4px 10px; padding: 9px 0; border-top: 1px solid var(--line); align-items: baseline; }
+.firm .rk { font-family: var(--font-data); color: var(--muted); }
+.firm .nm { font-weight: 500; min-width: 0; }
+.firm .val { font-family: var(--font-data); text-align: right; white-space: nowrap; }
+.firm .meta { grid-column: 2 / 4; font-size: 0.75rem; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+.etype { font-size: 0.6875rem; padding: 1px 6px; border-radius: 3px; border: 1px solid var(--line-strong); color: var(--ink-2); }
+.etype.soe { border-color: var(--accent); color: var(--accent); }
+.etype.low { border-color: transparent; background: var(--warn-bg); color: var(--warn-ink); }
+.empty-row { padding: 10px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: var(--step--1); }
+
+/* ---------- economy view ---------- */
+:root { --series-1: #2a78d6; --series-2: #eb6834; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --series-1: #3987e5; --series-2: #d95926; } }
+:root[data-theme="dark"] { --series-1: #3987e5; --series-2: #d95926; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 28px; }
+.tile { background: var(--surface); padding: 14px 16px; display: grid; gap: 4px; align-content: start; }
+.tile .k { font-size: var(--step--1); color: var(--ink-2); }
+.tile .v { font-family: var(--font-display); font-size: 1.75rem; font-weight: 500; line-height: 1.1; }
+.tile .v small { font-family: var(--font-body); font-size: 0.875rem; color: var(--ink-2); font-weight: 400; margin-left: 3px; }
+.tile .p { font-size: 0.75rem; color: var(--muted); }
+.eco-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 16px; margin-bottom: 28px; }
+.chart-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; display: grid; gap: 8px; min-width: 0; position: relative; }
+.chart-card h3 { font-family: var(--font-body); font-size: var(--step-0); font-weight: 600; }
+.chart-card .sub { font-size: var(--step--1); color: var(--muted); }
+.chart-card svg { width: 100%; display: block; overflow: visible; }
+.chart-card svg text { fill: var(--muted); font-family: var(--font-data); font-size: 11px; }
+.chart-card svg .lbl { fill: var(--ink); font-family: var(--font-body); font-size: 12px; font-weight: 600; }
+.chart-card svg .grid line { stroke: var(--line); }
+.chart-card svg .domain, .chart-card svg .tick line { stroke: var(--line-strong); }
+.legend-row { display: flex; gap: 14px; flex-wrap: wrap; font-size: var(--step--1); color: var(--ink-2); }
+.legend-row i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: 3px; margin-right: 6px; }
+.chart-src { font-size: 0.75rem; color: var(--muted); }
+.eco-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 16px; margin-bottom: 28px; align-items: start; }
+.eco-block { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; display: grid; gap: 8px; min-width: 0; }
+.eco-block-head { display: grid; gap: 4px; }
+.eco-block h2 { font-size: 1.25rem; }
+.stat-list { list-style: none; margin: 0; padding: 0; }
+.stat { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; padding: 8px 0; border-top: 1px solid var(--line); }
+.stat:first-child { border-top: 0; }
+.stat .sv { font-family: var(--font-data); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.stat .sm { grid-column: 1 / 3; font-size: 0.75rem; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+.health-table td.n { font-family: var(--font-data); font-variant-numeric: tabular-nums; text-align: right; }
+.health-table th.n { text-align: right; }
+.hbar { display: inline-block; height: 6px; border-radius: 3px; background: var(--series-1); vertical-align: middle; margin-left: 8px; }
+
+/* ---------- data view ---------- */
+.prose { display: grid; gap: 14px; max-width: 70ch; }
+.prose h2 { font-size: var(--step-2); margin-top: 18px; }
+.prose ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.dl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 8px 0 4px; }
+.dl { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; display: grid; gap: 8px; }
+.dl strong { font-weight: 600; }
+.dl p { color: var(--ink-2); font-size: var(--step--1); }
+.dl-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.btn { border: 1px solid var(--line-strong); background: var(--surface); border-radius: var(--radius); padding: 6px 12px; cursor: pointer; font-size: var(--step--1); }
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.copied { color: var(--accent); font-size: var(--step--1); }
+.cite { font-family: var(--font-data); font-size: 0.8125rem; background: var(--surface-2); padding: 12px; border-radius: var(--radius); white-space: pre-wrap; overflow-x: auto; user-select: all; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.cat-table { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
+.cat-table th, .cat-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.cat-table th { color: var(--muted); font-weight: 500; }
+.loading { color: var(--muted); padding: 40px 0; }
+
+@media (max-width: 900px) {
+  .desk { grid-template-columns: 1fr; height: auto; min-height: 0; }
+  .map-wrap { height: 58vh; min-height: 360px; }
+  .panel { border-left: 0; border-top: 1px solid var(--line); overflow: visible; }
+  .split { grid-template-columns: 1fr; }
+  .tabs { margin-left: 0; width: 100%; }
+  .bar-inner { gap: 4px 16px; padding-block: 8px 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="#map" aria-label="Zila Atlas, home">
+      <span class="brand-name">Zila Atlas</span>
+      <span class="brand-urdu" lang="ur" dir="rtl">ضلع</span>
+    </a>
+    <nav class="tabs" role="tablist" aria-label="Views">
+      <button class="tab" role="tab" id="tab-map" data-view="map" aria-selected="true">Map</button>
+      <button class="tab" role="tab" id="tab-compare" data-view="compare" aria-selected="false">Compare</button>
+      <button class="tab" role="tab" id="tab-firms" data-view="firms" aria-selected="false">Companies</button>
+      <button class="tab" role="tab" id="tab-economy" data-view="economy" aria-selected="false">Economy</button>
+      <button class="tab" role="tab" id="tab-data" data-view="data" aria-selected="false">Data &amp; methods</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ======================= MAP ======================= -->
+  <section class="view" id="view-map" role="tabpanel" aria-labelledby="tab-map">
+    <div class="desk">
+      <div class="map-wrap">
+        <div id="map" aria-label="Map of Pakistan's districts"></div>
+        <div class="map-fallback" id="map-fallback" hidden></div>
+        <div class="map-tools">
+          <label class="chip" id="imagery-chip"><input type="checkbox" id="opt-imagery" checked> Satellite imagery</label>
+          <label class="chip"><input type="checkbox" id="opt-provinces" checked> Province borders</label>
+        </div>
+        <div class="tooltip" id="tooltip" hidden></div>
+      </div>
+      <aside class="panel" aria-label="Indicator and district details">
+        <div class="panel-sec">
+          <div class="field">
+            <label for="ind-select">Show on map</label>
+            <select class="select" id="ind-select"></select>
+          </div>
+          <p class="ind-desc" id="ind-desc"></p>
+          <div class="legend" id="legend" aria-live="polite"></div>
+          <div class="national" id="national"></div>
+        </div>
+        <div class="panel-sec">
+          <div class="field">
+            <label for="search">Find a district</label>
+            <input class="input" id="search" list="district-list" placeholder="Type a district name" autocomplete="off">
+            <datalist id="district-list"></datalist>
+          </div>
+        </div>
+        <div id="detail"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ======================= COMPARE ======================= -->
+  <section class="view" id="view-compare" role="tabpanel" aria-labelledby="tab-compare" hidden>
+    <div class="page">
+      <div class="page-head">
+        <span class="eyebrow">Compare districts</span>
+        <h1>How two indicators move together</h1>
+        <p>Each dot is one of the 136 districts covered by Census 2023, sized by population. Pick a province to highlight its districts, and click any dot to select it.</p>
+      </div>
+      <div class="controls">
+        <div class="field"><label for="x-select">Horizontal axis</label><select class="select" id="x-select"></select></div>
+        <div class="field"><label for="y-select">Vertical axis</label><select class="select" id="y-select"></select></div>
+        <div class="field"><label for="prov-select">Highlight province</label><select class="select" id="prov-select"></select></div>
+      </div>
+      <div class="split">
+        <div class="plot-card">
+          <div class="plot-meta"><span id="corr"></span><span id="plot-legend"></span></div>
+          <svg id="scatter" role="img" aria-label="Scatter plot of districts"></svg>
+          <div class="tooltip" id="ptooltip" hidden></div>
+        </div>
+        <div class="rank-card">
+          <header><span class="eyebrow">Ranking</span><strong id="rank-title"></strong></header>
+          <div class="rank-scroll"><table class="rank-table" id="rank-table"></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FIRMS ======================= -->
+  <section class="view" id="view-firms" role="tabpanel" aria-labelledby="tab-firms" hidden>
+    <div class="page">
+      <div class="page-head">
+        <span class="eyebrow">Companies</span>
+        <h1>The largest companies in each province</h1>
+        <p id="firms-intro">Companies are ranked by annual revenue, and banks by total assets, because a bank's income is not comparable to a manufacturer's sales. Every figure comes from a published annual report or results announcement, linked beside it.</p>
+      </div>
+      <div class="controls">
+        <div class="field" style="flex:0 0 auto;min-width:0">
+          <label id="firms-view-label">Count a company in a province if it is</label>
+          <div class="seg" role="group" aria-labelledby="firms-view-label">
+            <button id="fv-hq" aria-pressed="true">Headquartered there</button>
+            <button id="fv-ops" aria-pressed="false">Operating there</button>
+          </div>
+        </div>
+      </div>
+      <div class="prov-grid" id="prov-grid"><p class="loading">Loading companies</p></div>
+      <p class="ind-desc" id="firms-foot" style="margin-top:16px;max-width:75ch"></p>
+    </div>
+  </section>
+
+  <!-- ======================= ECONOMY ======================= -->
+  <section class="view" id="view-economy" role="tabpanel" aria-labelledby="tab-economy" hidden>
+    <div class="page">
+      <div class="page-head">
+        <span class="eyebrow">Economy</span>
+        <h1>Pakistan's national accounts</h1>
+        <p>Federal government finances, prices, output and credit standing. Each figure shows the period it covers and links to where it was published; dates differ because each statistic is released on its own schedule.</p>
+      </div>
+      <div class="tiles" id="eco-tiles"></div>
+      <div class="eco-charts" id="eco-charts"></div>
+      <div class="eco-sections" id="eco-sections"></div>
+      <section class="eco-block" id="eco-health">
+        <header class="eco-block-head"><h2>Fertility and child mortality by province</h2>
+          <p class="ind-desc" id="health-desc"></p></header>
+        <div class="field" style="max-width:420px"><label for="health-survey">Survey</label><select class="select" id="health-survey"></select></div>
+        <div class="table-wrap" style="margin-top:12px"><table class="cat-table health-table" id="health-table"></table></div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ======================= DATA & METHODS ======================= -->
+  <section class="view" id="view-data" role="tabpanel" aria-labelledby="tab-data" hidden>
+    <div class="page">
+      <div class="page-head">
+        <span class="eyebrow">Data &amp; methods</span>
+        <h1>Where every number comes from</h1>
+        <p>Zila Atlas is free to use. The data, the code that builds it, and the reasoning behind each decision are all open.</p>
+      </div>
+      <div class="prose">
+        <h2>Download the data</h2>
+        <p>Each table can be copied straight into a spreadsheet, or opened as a CSV file.</p>
+      </div>
+      <div class="dl-grid" id="downloads"></div>
+
+      <div class="prose">
+        <h2>Sources</h2>
+        <ul>
+          <li><strong>Census indicators.</strong> <span id="src-census"></span> District totals for population, households and growth come from the official district summary; every other indicator is computed by summing the tehsil-level census tables and then dividing.</li>
+          <li><strong>District boundaries.</strong> <span id="src-bounds"></span></li>
+          <li><strong>Economy and health.</strong> State Bank of Pakistan, Finance Division, Pakistan Bureau of Statistics, the IMF, rating agencies, and the Pakistan Demographic and Health Survey. Each figure on the Economy tab links its own source.</li>
+          <li><strong>Companies.</strong> Audited annual reports, results announcements filed with the Pakistan Stock Exchange, and the Finance Division's reports on state-owned enterprises. Each company links to its own source.</li>
+        </ul>
+
+        <h2>Licences and credits</h2>
+        <ul>
+          <li><strong>District and province shapes (ODbL 1.0).</strong> They are built from 2017 census tehsil boundaries made by Pathways Data Pvt. Ltd. and distributed by geoBoundaries (gbOpen PAK ADM3), which are licensed under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">Open Database License 1.0</a>. The shapes published here are an adapted version of that database and are offered under the same licence: <a href="data/districts.geojson" target="_blank" rel="noopener">districts.geojson</a>, <a href="data/provinces.geojson" target="_blank" rel="noopener">provinces.geojson</a> and <a href="data/special_areas.geojson" target="_blank" rel="noopener">special_areas.geojson</a>. If you reuse them, credit Pathways Data and geoBoundaries, and share any adapted version under the ODbL.</li>
+          <li><strong>Census 2023 figures.</strong> Published by the Pakistan Bureau of Statistics. The tables were read from the PakPC2023 R package, which is licensed under GPL-2.</li>
+          <li><strong>Satellite imagery.</strong> Imagery &copy; Esri, Maxar, Earthstar Geographics and the GIS User Community. It is a background only; no figure is taken from it.</li>
+          <li><strong>World Bank figures.</strong> World Development Indicators, licensed CC BY 4.0.</li>
+          <li><strong>Company figures</strong> come from public filings and reports. Zila Atlas does not redistribute Pakistan Stock Exchange market data.</li>
+          <li><strong>Zila Atlas code and compiled tables.</strong> The code is released under the MIT licence. The compiled data tables are released under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>, except the district shapes (ODbL, above) and figures that keep their publisher's terms.</li>
+          <li><strong>All other sources</strong> (survey reports, central bank and ministry publications) are credited beside the figure they support.</li>
+        </ul>
+
+        <h2>How the district map was built</h2>
+        <p>No official district map matching the 2023 census is openly published, so this one is assembled from census building blocks. The 2017 census tehsils are each assigned to their 2023 census district by matching names, then merged into district shapes. Of 553 tehsils, 381 matched a census tehsil name exactly, 74 matched a close spelling inside the same district, 19 come from Gilgit-Baltistan's own district layer, and 79 were assigned by hand with a written reason. Each district carries a confidence label taken from its least certain tehsil.</p>
+        <p>The result is 156 districts: 36 in Punjab, 30 in Sindh, 35 in Khyber Pakhtunkhwa, 34 in Balochistan, Islamabad, 10 in Azad Jammu and Kashmir and 10 in Gilgit-Baltistan.</p>
+
+        <h2>Known limits</h2>
+        <ul>
+          <li><strong>Karachi's seven districts</strong> are drawn from the city's older towns and cantonments. Where a town was split between two of today's districts, the whole town sits in one of them, so Karachi East and Karachi South are marked low confidence.</li>
+          <li><strong>Azad Jammu and Kashmir and Gilgit-Baltistan</strong> are mapped by district but are not covered by Pakistan's Census 2023, so they show no census figures. Gilgit-Baltistan uses its 10 long-standing districts; districts announced since 2019 are not yet drawn separately.</li>
+          <li><strong>Tando Muhammad Khan</strong>: one tehsil is missing from the census area table, so its area and density are left blank. Its urban share and sex ratio come from the age table instead. All its other figures are complete.</li>
+          <li><strong>Household tables</strong> (housing, water, schooling, disability) count people living in households. People in institutions such as barracks and hostels are excluded, so these tables add up to about 0.4% less than the official population.</li>
+          <li><strong>Balochistan's growth rates</strong> between 2017 and 2023 are very high in several districts (up to 9.5% a year). These are the published census figures; their accuracy has been publicly debated.</li>
+          <li><strong>The area labelled "Disputed Territory"</strong> in the source tehsil layer lies outside every district. It is drawn as a separate shaded area and has no figures.</li>
+          <li><strong>Areas</strong> come from the census tables, not from the map, because the map's lines are approximate at the edges.</li>
+        </ul>
+
+        <h2>Indicators</h2>
+      </div>
+      <div class="table-wrap" style="margin:8px 0 8px"><table class="cat-table" id="cat-table"></table></div>
+
+      <div class="prose">
+        <h2>How to cite</h2>
+        <div class="cite" id="cite"></div>
+        <h2>Corrections</h2>
+        <p>Found a wrong number, a misplaced tehsil or a misspelled name? Every correction is logged with the date and what changed, and the affected tables are rebuilt. Corrections so far: none.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
+<script>
+"use strict";
+
+/* ============================================================
+   Zila Atlas. Plain JavaScript, plus d3 (charts) and MapLibre (map).
+   ============================================================ */
+
+const STATE = {
+  view: "map",
+  indicator: "literacy",
+  district: null,
+  x: "literacy",
+  y: "out_of_school",
+  province: "",
+  firmsView: "hq",
+};
+const DATA = {};
+const CENSUS_PROVS = ["PB", "SD", "KP", "BA", "IS"];
+const PROV_ORDER = ["PB", "SD", "KP", "BA", "IS", "JK", "GB"];
+const KEY_STATS = ["population", "growth_rate", "literacy", "out_of_school"];
+const PROV_SHORT = { PB: "Punjab", SD: "Sindh", KP: "KP", BA: "Balochistan", IS: "ICT", JK: "AJK", GB: "GB" };
+
+/* ---------- small helpers ---------- */
+const $ = (s) => document.querySelector(s);
+const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function fmt(value, id) {
+  if (value === null || value === undefined || Number.isNaN(value)) return "–";
+  const meta = DATA.byId[id];
+  if (id === "population" || id === "population_2017" || id === "households") {
+    if (value >= 1e6) return (value / 1e6).toFixed(value >= 1e7 ? 1 : 2) + " m";
+    if (value >= 1e3) return Math.round(value / 1e3).toLocaleString("en") + " k";
+    return Math.round(value).toLocaleString("en");
+  }
+  if (id === "area_census" || id === "density") return Math.round(value).toLocaleString("en");
+  if (meta && meta.unit && meta.unit.startsWith("%")) return value.toFixed(1) + "%";
+  return value.toFixed(1);
+}
+function unitSuffix(id) {
+  const u = DATA.byId[id].unit;
+  if (u.startsWith("%") || ["persons", "households"].includes(u)) return "";
+  return " " + u;
+}
+function value(did, id) {
+  const d = DATA.ind.districts[did];
+  return d ? d.v[DATA.idx[id]] : null;
+}
+function agg(code, id) {
+  const a = DATA.ind.aggregates[code];
+  return a ? a[DATA.idx[id]] : null;
+}
+function censusIds() {
+  return Object.keys(DATA.ind.districts).filter((k) => DATA.ind.districts[k].in_census);
+}
+
+/* ---------- quantile classes for the choropleth ---------- */
+function breaksFor(id) {
+  const vals = censusIds().map((k) => value(k, id)).filter((v) => v !== null).sort((a, b) => a - b);
+  const q = [];
+  for (let i = 1; i < 6; i++) q.push(d3.quantileSorted(vals, i / 6));
+  return { breaks: q, min: vals[0], max: vals[vals.length - 1] };
+}
+function rampColors() { return [0, 1, 2, 3, 4, 5].map((i) => css(`--ramp-${i}`)); }
+function classOf(v, breaks) {
+  if (v === null) return -1;
+  let c = 0;
+  while (c < breaks.length && v > breaks[c]) c++;
+  return c;
+}
+
+/* ============================================================
+   Loading
+   ============================================================ */
+async function loadAll() {
+  const get = (f) => fetch("data/" + f).then((r) => { if (!r.ok) throw new Error(f); return r.json(); });
+  const [ind, districts, provinces, special, firms] = await Promise.all([
+    get("indicators.json"), get("districts.geojson"), get("provinces.geojson"),
+    get("special_areas.geojson"), get("firms.json").catch(() => ({ firms: [] })),
+  ]);
+  DATA.nat = await get("national.json").catch(() => null);
+  DATA.ind = ind;
+  DATA.geo = { districts, provinces, special };
+  DATA.firms = firms;
+  DATA.idx = {};
+  DATA.byId = {};
+  ind.catalog.forEach((c, i) => { DATA.idx[c.indicator_id] = i; DATA.byId[c.indicator_id] = c; });
+  DATA.nameToId = {};
+  Object.entries(ind.districts).forEach(([k, d]) => {
+    DATA.nameToId[(d.name + ", " + ind.provinces[d.province]).toLowerCase()] = k;
+    DATA.nameToId[d.name.toLowerCase()] = DATA.nameToId[d.name.toLowerCase()] || k;
+  });
+}
+
+/* ============================================================
+   Views and routing
+   ============================================================ */
+function show(view) {
+  STATE.view = view;
+  document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.view === view)));
+  document.querySelectorAll(".view").forEach((v) => { v.hidden = v.id !== "view-" + view; });
+  if (view === "map" && MAP.map) MAP.map.resize();
+  if (view === "compare") drawCompare();
+  if (view === "firms") drawFirms();
+  if (view === "economy") drawEconomy();
+}
+function readHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (["map", "compare", "firms", "economy", "data"].includes(h)) return show(h);
+  if (DATA.ind && DATA.ind.districts[h]) { show("map"); selectDistrict(h, true); return; }
+  show("map");
+}
+
+/* ============================================================
+   Indicator pickers
+   ============================================================ */
+function fillIndicatorSelect(sel, current, ratesOnly) {
+  const groups = {};
+  DATA.ind.catalog.forEach((c) => {
+    if (ratesOnly && ["population_2017", "households", "area_census"].includes(c.indicator_id)) return;
+    (groups[c.category] = groups[c.category] || []).push(c);
+  });
+  sel.innerHTML = Object.entries(groups).map(([g, items]) =>
+    `<optgroup label="${esc(g)}">` +
+    items.map((c) => `<option value="${c.indicator_id}"${c.indicator_id === current ? " selected" : ""}>${esc(c.label)}</option>`).join("") +
+    "</optgroup>").join("");
+}
+
+/* ============================================================
+   MAP
+   ============================================================ */
+const MAP = { map: null, hoverId: null, imageryFailed: false };
+
+function mapColorExpr() {
+  const { breaks } = breaksFor(STATE.indicator);
+  const ramp = rampColors();
+  const expr = ["match", ["get", "district_id"]];
+  Object.keys(DATA.ind.districts).forEach((k) => {
+    const c = classOf(value(k, STATE.indicator), breaks);
+    expr.push(k, c < 0 ? css("--nodata") : ramp[c]);
+  });
+  expr.push(css("--nodata"));
+  return expr;
+}
+
+function initMap() {
+  if (typeof maplibregl === "undefined") {
+    const fb = $("#map-fallback");
+    fb.hidden = false;
+    fb.textContent = "The map library could not load. The Compare, Companies and Data views still work.";
+    return;
+  }
+  const map = new maplibregl.Map({
+    container: "map",
+    style: {
+      version: 8,
+      sources: {
+        imagery: {
+          type: "raster", tileSize: 256, maxzoom: 17,
+          tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+          attribution: "Imagery © Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+        },
+      },
+      layers: [
+        { id: "bg", type: "background", paint: { "background-color": css("--map-bg") } },
+        { id: "imagery", type: "raster", source: "imagery", paint: { "raster-opacity": 0.9, "raster-saturation": -0.35 } },
+      ],
+    },
+    bounds: [[60.8, 23.6], [77.9, 37.2]],
+    fitBoundsOptions: { padding: 24 },
+    attributionControl: { compact: true, customAttribution: "District shapes: Pathways Data via geoBoundaries (ODbL)" },
+    dragRotate: false,
+    pitchWithRotate: false,
+  });
+  MAP.map = map;
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
+  map.touchZoomRotate.disableRotation();
+
+  // Imagery tiles are blocked in some embedded viewers; fall back quietly.
+  map.on("error", (e) => {
+    if (e && e.sourceId === "imagery" && !MAP.imageryFailed) {
+      MAP.imageryFailed = true;
+      map.setLayoutProperty("imagery", "visibility", "none");
+      $("#opt-imagery").checked = false;
+      $("#opt-imagery").disabled = true;
+      $("#imagery-chip").title = "Satellite imagery is not available in this viewer";
+      $("#imagery-chip").style.opacity = "0.55";
+    }
+  });
+
+  map.on("load", () => {
+    map.addSource("districts", { type: "geojson", data: DATA.geo.districts, promoteId: "district_id" });
+    map.addSource("provinces", { type: "geojson", data: DATA.geo.provinces });
+    map.addSource("special", { type: "geojson", data: DATA.geo.special });
+
+    map.addLayer({ id: "special-fill", type: "fill", source: "special",
+      paint: { "fill-color": css("--special"), "fill-opacity": 0.75 } });
+    map.addLayer({ id: "special-line", type: "line", source: "special",
+      paint: { "line-color": css("--muted"), "line-width": 1, "line-dasharray": [2, 2] } });
+    map.addLayer({ id: "district-fill", type: "fill", source: "districts",
+      paint: { "fill-color": mapColorExpr(), "fill-opacity": 0.82 } });
+    map.addLayer({ id: "district-line", type: "line", source: "districts",
+      paint: { "line-color": css("--surface"), "line-width": 0.6, "line-opacity": 0.9 } });
+    map.addLayer({ id: "province-line", type: "line", source: "provinces",
+      paint: { "line-color": css("--ink"), "line-width": 1.4, "line-opacity": 0.7 } });
+    map.addLayer({ id: "district-hover", type: "line", source: "districts",
+      paint: { "line-color": css("--ink"), "line-width": ["case", ["boolean", ["feature-state", "hover"], false], 2, 0] } });
+    map.addLayer({ id: "district-sel", type: "line", source: "districts",
+      paint: { "line-color": css("--highlight"), "line-width": ["case", ["boolean", ["feature-state", "sel"], false], 3, 0] } });
+
+    const tip = $("#tooltip");
+    map.on("mousemove", "district-fill", (e) => {
+      const f = e.features[0];
+      const id = f.properties.district_id;
+      if (MAP.hoverId && MAP.hoverId !== id) map.setFeatureState({ source: "districts", id: MAP.hoverId }, { hover: false });
+      MAP.hoverId = id;
+      map.setFeatureState({ source: "districts", id }, { hover: true });
+      map.getCanvas().style.cursor = "pointer";
+      const d = DATA.ind.districts[id];
+      const v = value(id, STATE.indicator);
+      tip.innerHTML = `<strong>${esc(d.name)}</strong>${esc(DATA.ind.provinces[d.province])}<br>` +
+        (d.in_census ? `<span class="tt-val">${fmt(v, STATE.indicator)}${v === null ? "" : esc(unitSuffix(STATE.indicator))}</span> <span class="cmp-muted">${esc(DATA.byId[STATE.indicator].label)}</span>`
+                     : `<span class="cmp-muted">Not covered by Census 2023</span>`);
+      tip.hidden = false;
+      const r = map.getContainer().getBoundingClientRect();
+      const x = Math.min(e.point.x + 14, r.width - 270);
+      const y = Math.min(e.point.y + 14, r.height - 90);
+      tip.style.left = x + "px"; tip.style.top = y + "px";
+    });
+    map.on("mouseleave", "district-fill", () => {
+      if (MAP.hoverId) map.setFeatureState({ source: "districts", id: MAP.hoverId }, { hover: false });
+      MAP.hoverId = null; tip.hidden = true; map.getCanvas().style.cursor = "";
+    });
+    map.on("click", "district-fill", (e) => selectDistrict(e.features[0].properties.district_id, false));
+    map.on("mousemove", "special-fill", (e) => {
+      if (map.queryRenderedFeatures(e.point, { layers: ["district-fill"] }).length) return;
+      const f = e.features[0];
+      tip.innerHTML = `<strong>${esc(f.properties.area_name)}</strong><span class="cmp-muted">Outside all districts. No figures.</span>`;
+      tip.hidden = false; tip.style.left = (e.point.x + 14) + "px"; tip.style.top = (e.point.y + 14) + "px";
+    });
+    map.on("mouseleave", "special-fill", () => { tip.hidden = true; });
+
+    if (STATE.district) markSelected(STATE.district);
+  });
+}
+
+function recolorMap() {
+  if (!MAP.map || !MAP.map.getLayer("district-fill")) return;
+  const m = MAP.map;
+  m.setPaintProperty("district-fill", "fill-color", mapColorExpr());
+  m.setPaintProperty("bg", "background-color", css("--map-bg"));
+  m.setPaintProperty("district-line", "line-color", css("--surface"));
+  m.setPaintProperty("province-line", "line-color", css("--ink"));
+  m.setPaintProperty("district-hover", "line-color", css("--ink"));
+  m.setPaintProperty("district-sel", "line-color", css("--highlight"));
+  m.setPaintProperty("special-fill", "fill-color", css("--special"));
+}
+
+function markSelected(id) {
+  const m = MAP.map;
+  if (!m || !m.getSource("districts")) return;
+  if (MAP.selId) m.setFeatureState({ source: "districts", id: MAP.selId }, { sel: false });
+  MAP.selId = id;
+  if (id) m.setFeatureState({ source: "districts", id }, { sel: true });
+}
+
+function zoomTo(id) {
+  const m = MAP.map;
+  if (!m) return;
+  const f = DATA.geo.districts.features.find((x) => x.properties.district_id === id);
+  if (!f) return;
+  const b = d3.geoBounds(f);
+  m.fitBounds(b, { padding: 60, maxZoom: 9, duration: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 700 });
+}
+
+/* ---------- legend + national line ---------- */
+function drawLegend() {
+  const id = STATE.indicator;
+  const meta = DATA.byId[id];
+  const { breaks, min, max } = breaksFor(id);
+  const ramp = rampColors();
+  const edges = [min, ...breaks];
+  $("#ind-desc").textContent = meta.description + " (" + meta.unit + ", Census " + meta.year + ").";
+  $("#legend").innerHTML =
+    `<div class="legend-scale">${ramp.map((c) => `<span style="background:${c}"></span>`).join("")}</div>` +
+    `<div class="legend-ticks">${edges.map((e) => `<span>${fmt(e, id)}</span>`).join("")}</div>` +
+    `<div class="legend-extra"><span>Each colour holds one sixth of districts. Highest: ${fmt(max, id)}</span></div>` +
+    `<div class="legend-extra"><span><i class="swatch" style="background:var(--nodata)"></i>Not in Census 2023 (AJK, GB)</span>` +
+    `<span><i class="swatch" style="background:var(--special);outline:1px dashed var(--muted)"></i>Outside all districts</span></div>`;
+  $("#national").innerHTML = `<span>Pakistan (census areas)</span><span class="num">${fmt(agg("PK", id), id)}${esc(unitSuffix(id))}</span>`;
+}
+
+/* ---------- district detail panel ---------- */
+function rankOf(did, id) {
+  const ids = censusIds().filter((k) => value(k, id) !== null);
+  const v = value(did, id);
+  if (v === null) return null;
+  const higher = ids.filter((k) => value(k, id) > v).length;
+  return { rank: higher + 1, of: ids.length };
+}
+
+function drawDetail() {
+  const el = $("#detail");
+  const did = STATE.district;
+  if (!did) {
+    el.innerHTML = `<div class="detail-empty"><span class="eyebrow">District profile</span>
+      <p>Click a district on the map, or search for one above, to see all of its figures beside its province and Pakistan.</p>
+      <p>Try <a href="#PB-LAHORE">Lahore</a>, <a href="#SD-KARACHI-CENTRAL">Karachi Central</a>, <a href="#BA-QUETTA">Quetta</a> or <a href="#KP-PESHAWAR">Peshawar</a>.</p></div>`;
+    return;
+  }
+  const d = DATA.ind.districts[did];
+  const prov = DATA.ind.provinces[d.province];
+  const badges = [];
+  if (d.boundary_confidence && d.boundary_confidence !== "high")
+    badges.push(`<span class="badge warn" title="How certain the district outline is">Outline: ${esc(d.boundary_confidence)} confidence</span>`);
+  if (d.top_language) badges.push(`<span class="badge">Most common mother tongue: ${esc(d.top_language)}</span>`);
+  let html = `<div class="panel-sec"><div class="d-head"><span class="eyebrow">District profile</span><h2>${esc(d.name)}</h2>
+    <span class="d-prov">${esc(prov)}</span></div>${badges.length ? `<div class="badges">${badges.join("")}</div>` : ""}
+    ${d.note ? `<p class="note">${esc(d.note)}</p>` : ""}`;
+
+  if (d.in_census) {
+    html += `<div class="keystats">` + KEY_STATS.map((id) => {
+      const v = value(did, id), pv = agg(d.province, id);
+      return `<div class="keystat"><span class="k">${esc(DATA.byId[id].label)}</span><span class="v">${fmt(v, id)}</span>
+        <span class="c">${esc(PROV_SHORT[d.province])}: ${fmt(pv, id)}</span></div>`;
+    }).join("") + `</div></div>`;
+
+    const groups = {};
+    DATA.ind.catalog.forEach((c) => { (groups[c.category] = groups[c.category] || []).push(c); });
+    Object.entries(groups).forEach(([g, items]) => {
+      html += `<div class="panel-sec ind-group"><h3>${esc(g)}</h3><table class="ind-table"><thead><tr>
+        <th>Indicator</th><th>District</th><th>${esc(PROV_SHORT[d.province])}</th><th>Pakistan</th><th title="Position among 136 districts, highest on the right">Rank</th></tr></thead><tbody>`;
+      items.forEach((c) => {
+        const id = c.indicator_id;
+        const r = rankOf(did, id);
+        const pos = r ? (1 - (r.rank - 1) / Math.max(1, r.of - 1)) * 41 : null;
+        html += `<tr data-ind="${id}" class="${id === STATE.indicator ? "is-current" : ""}" title="Show ${esc(c.label)} on the map">
+          <td>${esc(c.label)}</td><td>${fmt(value(did, id), id)}</td><td class="cmp-muted">${fmt(agg(d.province, id), id)}</td>
+          <td class="cmp-muted">${fmt(agg("PK", id), id)}</td>
+          <td>${r ? `<span class="rankbar" aria-label="Rank ${r.rank} of ${r.of}"><i style="left:${pos.toFixed(1)}px"></i></span>` : ""}</td></tr>`;
+      });
+      html += `</tbody></table></div>`;
+    });
+  } else {
+    html += `</div>`;
+  }
+  const ph = provinceHealth(d.province);
+  if (ph) {
+    html += `<div class="panel-sec ind-group"><h3>Province health survey</h3><table class="ind-table"><thead><tr>
+      <th>Indicator</th><th>${esc(PROV_SHORT[d.province])}</th><th>Pakistan</th></tr></thead><tbody>` +
+      ph.rows.map((r) => `<tr><td>${esc(r.label)}</td><td>${r.p.value.toFixed(r.id === "tfr" ? 1 : 0)}</td>
+        <td class="cmp-muted">${r.n ? r.n.value.toFixed(r.id === "tfr" ? 1 : 0) : "–"}</td></tr>`).join("") +
+      `</tbody></table><p class="ind-desc" style="margin-top:6px">Province-level figures from ${esc(ph.survey)}. Surveys of this size cannot estimate individual districts. Fertility is births per woman; mortality is per 1,000 live births.</p></div>`;
+  }
+  el.innerHTML = html;
+  el.querySelectorAll("tr[data-ind]").forEach((tr) => tr.addEventListener("click", () => setIndicator(tr.dataset.ind)));
+}
+
+function selectDistrict(id, zoom) {
+  STATE.district = id;
+  markSelected(id);
+  drawDetail();
+  if (zoom) zoomTo(id);
+  if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + id);
+  if (STATE.view === "compare") drawCompare();
+}
+
+function setIndicator(id) {
+  STATE.indicator = id;
+  $("#ind-select").value = id;
+  recolorMap(); drawLegend(); drawDetail();
+}
+
+/* ============================================================
+   COMPARE
+   ============================================================ */
+function drawCompare() {
+  if (!DATA.ind || typeof d3 === "undefined") return;
+  const svg = d3.select("#scatter");
+  const card = $(".plot-card");
+  const W = Math.max(300, card.clientWidth - 32);
+  const H = Math.round(Math.min(560, Math.max(320, W * 0.72)));
+  const m = { t: 12, r: 18, b: 48, l: 56 };
+  svg.attr("viewBox", `0 0 ${W} ${H}`).attr("height", H);
+  svg.selectAll("*").remove();
+
+  const ids = censusIds().filter((k) => value(k, STATE.x) !== null && value(k, STATE.y) !== null);
+  const xs = ids.map((k) => value(k, STATE.x)), ys = ids.map((k) => value(k, STATE.y));
+  const x = d3.scaleLinear().domain(d3.extent(xs)).nice().range([m.l, W - m.r]);
+  const y = d3.scaleLinear().domain(d3.extent(ys)).nice().range([H - m.b, m.t]);
+  const r = d3.scaleSqrt().domain([0, d3.max(ids, (k) => value(k, "population"))]).range([2, W < 500 ? 11 : 16]);
+
+  svg.append("g").attr("class", "grid").attr("transform", `translate(${m.l},0)`)
+    .call(d3.axisLeft(y).ticks(6).tickSize(-(W - m.l - m.r)).tickFormat("")).call((g) => g.select(".domain").remove());
+  svg.append("g").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(W < 500 ? 4 : 7));
+  svg.append("g").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(6));
+  const xl = DATA.byId[STATE.x], yl = DATA.byId[STATE.y];
+  svg.append("text").attr("class", "axis-title").attr("x", W - m.r).attr("y", H - 10).attr("text-anchor", "end").text(`${xl.label} (${xl.unit})`);
+  svg.append("text").attr("class", "axis-title").attr("transform", "rotate(-90)").attr("x", -m.t).attr("y", 14).attr("text-anchor", "end").text(`${yl.label} (${yl.unit})`);
+
+  // Draw big dots first so small ones stay visible on top.
+  const order = ids.slice().sort((a, b) => value(b, "population") - value(a, "population"));
+  const tip = $("#ptooltip");
+  svg.append("g").selectAll("circle").data(order).join("circle")
+    .attr("class", (k) => "dot" + (STATE.province && DATA.ind.districts[k].province === STATE.province ? " in-prov" : "") + (k === STATE.district ? " sel" : ""))
+    .attr("cx", (k) => x(value(k, STATE.x))).attr("cy", (k) => y(value(k, STATE.y))).attr("r", (k) => r(value(k, "population")))
+    .style("cursor", "pointer")
+    .on("mousemove", (ev, k) => {
+      const d = DATA.ind.districts[k];
+      tip.innerHTML = `<strong>${esc(d.name)}</strong>${esc(DATA.ind.provinces[d.province])}<br>
+        ${esc(xl.label)}: <span class="num">${fmt(value(k, STATE.x), STATE.x)}</span><br>
+        ${esc(yl.label)}: <span class="num">${fmt(value(k, STATE.y), STATE.y)}</span><br>
+        Population: <span class="num">${fmt(value(k, "population"), "population")}</span>`;
+      tip.hidden = false;
+      const box = card.getBoundingClientRect();
+      tip.style.left = Math.min(ev.clientX - box.left + 14, box.width - 250) + "px";
+      tip.style.top = (ev.clientY - box.top + 14) + "px";
+    })
+    .on("mouseleave", () => { tip.hidden = true; })
+    .on("click", (ev, k) => selectDistrict(k, false));
+
+  if (STATE.district && ids.includes(STATE.district)) {
+    const k = STATE.district;
+    svg.append("text").attr("class", "dot-label").attr("x", x(value(k, STATE.x)) + r(value(k, "population")) + 4)
+      .attr("y", y(value(k, STATE.y)) + 4).text(DATA.ind.districts[k].name);
+  }
+
+  // Pearson correlation, weighting every district equally.
+  const mx = d3.mean(xs), my = d3.mean(ys);
+  const cov = d3.sum(xs.map((v, i) => (v - mx) * (ys[i] - my)));
+  const rr = cov / Math.sqrt(d3.sum(xs.map((v) => (v - mx) ** 2)) * d3.sum(ys.map((v) => (v - my) ** 2)));
+  $("#corr").innerHTML = `Correlation across ${ids.length} districts: <span class="num">r = ${rr.toFixed(2)}</span>`;
+  $("#plot-legend").innerHTML = STATE.province
+    ? `<i class="swatch" style="background:var(--accent)"></i>${esc(DATA.ind.provinces[STATE.province])} <i class="swatch" style="background:var(--muted);opacity:.55;margin-left:8px"></i>Other districts`
+    : `Dot size shows population`;
+  drawRanking();
+}
+
+const RANK = { sortDesc: true };
+function drawRanking() {
+  const id = STATE.y;
+  const meta = DATA.byId[id];
+  $("#rank-title").textContent = `${meta.label} (${meta.unit})`;
+  const rows = censusIds().filter((k) => value(k, id) !== null)
+    .sort((a, b) => RANK.sortDesc ? value(b, id) - value(a, id) : value(a, id) - value(b, id));
+  $("#rank-table").innerHTML = `<thead><tr><th class="r">#</th><th>District</th><th>Province</th>
+    <th class="r" id="rank-sort" title="Reverse the order">Value ${RANK.sortDesc ? "▼" : "▲"}</th></tr></thead><tbody>` +
+    rows.map((k, i) => {
+      const d = DATA.ind.districts[k];
+      return `<tr data-id="${k}" class="${k === STATE.district ? "sel" : ""}"><td class="r">${i + 1}</td><td>${esc(d.name)}</td>
+        <td>${esc(d.province)}</td><td class="r">${fmt(value(k, id), id)}</td></tr>`;
+    }).join("") + `</tbody>`;
+  $("#rank-sort").onclick = () => { RANK.sortDesc = !RANK.sortDesc; drawRanking(); };
+  $("#rank-table").querySelectorAll("tr[data-id]").forEach((tr) => tr.addEventListener("click", () => selectDistrict(tr.dataset.id, false)));
+}
+
+/* ============================================================
+   FIRMS
+   ============================================================ */
+const ETYPE = { listed: "Listed", soe_listed: "State-owned, listed", soe_unlisted: "State-owned",
+                private: "Private", foreign_subsidiary: "Foreign-owned" };
+
+function rs(mn) {
+  if (mn >= 1e6) return "Rs " + (mn / 1e6).toFixed(2) + " tn";
+  if (mn >= 1e3) return "Rs " + (mn / 1e3).toFixed(mn >= 1e5 ? 0 : 1) + " bn";
+  return "Rs " + Math.round(mn) + " m";
+}
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function period(d) {
+  if (!d) return "";
+  const [y, m] = d.split("-");
+  return MONTHS[+m - 1] + " " + y;
+}
+
+function firmItem(f, i) {
+  const val = f.metric === "total_assets" ? f.total_assets_pkr_mn : f.revenue_pkr_mn;
+  const when = f.metric === "total_assets" ? "Assets at " + period(f.period_end) : "Year to " + period(f.period_end);
+  const soe = f.entity_type && f.entity_type.startsWith("soe");
+  const flag = f.confidence === "low" ? `<span class="etype low" title="Sources disagree or the basis differs from other companies">Low confidence</span>` : "";
+  return `<li class="firm"><span class="rk">${i + 1}</span><span class="nm">${esc(f.firm_name)}</span>
+    <span class="val" title="${esc(f.basis || "")}">${rs(val)}</span>
+    <span class="meta"><span class="etype${soe ? " soe" : ""}">${esc(ETYPE[f.entity_type] || f.entity_type)}</span>${flag}
+    ${f.psx_ticker ? `<span class="num">${esc(f.psx_ticker)}</span>` : ""}<span>${esc(f.sector || "")}</span>
+    <span>${esc(when)}</span>${f.source_url ? `<a href="${esc(f.source_url)}" target="_blank" rel="noopener">Source</a>` : ""}</span></li>`;
+}
+
+const HQ_EMPTY = {
+  BA: "No company headquartered in Balochistan publishes accounts large enough to rank. QESCO, the Quetta power distributor, reports its loss but not its revenue.",
+};
+
+function drawFirms() {
+  const grid = $("#prov-grid");
+  const firms = (DATA.firms && DATA.firms.firms) || [];
+  if (!firms.length) {
+    grid.innerHTML = `<p class="loading">Company figures are being verified and will appear here.</p>`;
+    return;
+  }
+  const inProv = (f, p) => STATE.firmsView === "hq" ? f.hq_province_code === p
+    : (f.operating_province_codes || "").split(";").map((s) => s.trim()).includes(p) || f.hq_province_code === p;
+  const top = (list, key) => list.filter((f) => f[key] != null).sort((a, b) => b[key] - a[key]).slice(0, 3);
+
+  grid.innerHTML = PROV_ORDER.map((p) => {
+    const here = firms.filter((f) => inProv(f, p));
+    const cos = top(here.filter((f) => f.metric === "revenue"), "revenue_pkr_mn");
+    const banks = top(here.filter((f) => f.metric === "total_assets"), "total_assets_pkr_mn");
+    const list = (title, items, empty) => `<h3>${title}</h3>` + (items.length ? items.map(firmItem).join("")
+      : `<li class="empty-row">${empty}</li>`);
+    return `<article class="prov-card"><header><h2>${esc(DATA.ind.provinces[p])}</h2><span class="code">${p}</span></header>
+      <ul class="firm-list">
+        ${list("Companies, by revenue", cos, STATE.firmsView === "hq" ? (HQ_EMPTY[p] || "No large company with published accounts is headquartered here.") : "No company operations are recorded here yet.")}
+        ${list("Banks, by total assets", banks, STATE.firmsView === "hq" ? "No bank with published accounts is headquartered here." : "Banks are listed by head office only.")}
+      </ul></article>`;
+  }).join("");
+  const asOf = DATA.firms.as_of ? `Figures checked ${DATA.firms.as_of}. Each company uses its latest published financial year, so years differ; the year is shown beside every figure. ` : "";
+  $("#firms-foot").textContent = asOf + "Headquarters means the head office named in the company's accounts. " +
+    "Operating means the company has major plants, fields or a licensed service territory in the province, recorded only where documented. " +
+    "Private companies that do not publish accounts are not ranked, and no figure on this page is an estimate.";
+}
+
+
+/* ============================================================
+   ECONOMY
+   ============================================================ */
+const ECO_HEADLINE = ["gdp_nominal_usd", "gdp_growth", "cpi_yoy", "policy_rate", "pib_10y",
+                      "public_debt_total", "public_debt_gdp", "fiscal_deficit_gdp", "sbp_reserves", "rating_moodys"];
+const ECO_ORDER = ["Output and income", "Prices and interest rates", "Public debt",
+                   "Government cash and reserves", "External sector", "Fiscal", "Credit ratings",
+                   "IMF programme", "Labour"];
+const HEALTH_IND = [["tfr", "Fertility rate", "births per woman"], ["u5mr", "Under-5 mortality", "per 1,000 live births"],
+                    ["imr", "Infant mortality", "per 1,000 live births"], ["nmr", "Newborn mortality", "per 1,000 live births"]];
+const REGION_ORDER = ["PK", "PB", "SD", "KP", "BA", "IS", "JK", "GB", "FATA"];
+const REGION_NAME = { PK: "Pakistan", FATA: "Former FATA" };
+
+function statByID(id) { return (DATA.nat && DATA.nat.stats.find((r) => r.indicator_id === id)) || null; }
+
+function statValue(r) {
+  if (typeof r.value !== "number") return { v: esc(r.value), u: "" };
+  const u = r.unit || "";
+  const n = Math.abs(r.value) >= 1000 ? r.value.toLocaleString("en", { maximumFractionDigits: 0 })
+          : r.value.toLocaleString("en", { maximumFractionDigits: 2 });
+  const short = { "%": "%", "% of GDP": "% of GDP", "USD billion": "bn USD", "PKR trillion": "tn PKR",
+                  "PKR billion": "bn PKR", "PKR per USD": "PKR / USD", "USD": "USD", "international $ billion": "bn intl $",
+                  "international $": "intl $", "% per year": "%" };
+  return { v: n, u: short[u] !== undefined ? short[u] : u };
+}
+
+function statMeta(r) {
+  const parts = [`<span>${esc(r.period)}</span>`];
+  if (r.notes) parts.push(`<span>${esc(r.notes)}</span>`);
+  if (r.source_url) parts.push(`<a href="${esc(r.source_url)}" target="_blank" rel="noopener">${esc(r.source_name || "Source")}</a>`);
+  return parts.join("");
+}
+
+function drawEconomy() {
+  if (!DATA.nat) {
+    $("#eco-tiles").innerHTML = `<p class="loading">National figures are being verified and will appear here.</p>`;
+    return;
+  }
+  // Headline tiles
+  $("#eco-tiles").innerHTML = ECO_HEADLINE.map(statByID).filter(Boolean).map((r) => {
+    const { v, u } = statValue(r);
+    return `<div class="tile"><span class="k">${esc(r.label)}</span>
+      <span class="v">${v}${u ? `<small>${esc(u)}</small>` : ""}</span><span class="p">${esc(r.period)}</span></div>`;
+  }).join("");
+
+  // Grouped lists
+  const groups = {};
+  DATA.nat.stats.forEach((r) => { (groups[r.category] = groups[r.category] || []).push(r); });
+  const cats = Object.keys(groups).sort((a, b) => {
+    const ia = ECO_ORDER.indexOf(a), ib = ECO_ORDER.indexOf(b);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  $("#eco-sections").innerHTML = cats.map((c) => `<section class="eco-block"><h2>${esc(c)}</h2><ul class="stat-list">` +
+    groups[c].map((r) => {
+      const { v, u } = statValue(r);
+      return `<li class="stat"><span>${esc(r.label)}</span><span class="sv">${v}${u ? " " + esc(u) : ""}</span>
+        <span class="sm">${statMeta(r)}</span></li>`;
+    }).join("") + `</ul></section>`).join("");
+
+  drawEcoCharts();
+  drawHealth();
+}
+
+function chartCard(id, title, sub) {
+  return `<div class="chart-card" id="${id}"><h3>${esc(title)}</h3>${sub ? `<span class="sub">${esc(sub)}</span>` : ""}
+    <div class="legend-row"></div><svg role="img" aria-label="${esc(title)}"></svg><span class="chart-src"></span>
+    <div class="tooltip" hidden></div></div>`;
+}
+
+function drawEcoCharts() {
+  const S = DATA.nat.series || {};
+  const cards = [];
+  if (S.cpi_avg || S.policy_rate_end_june) cards.push(chartCard("ch-rates", "Inflation and the policy rate", "Fiscal years ending June, %"));
+  if (S.gdp_growth) cards.push(chartCard("ch-growth", "Real GDP growth", "Fiscal years ending June, %"));
+  if (S.public_debt_gdp) cards.push(chartCard("ch-debt", "Public debt", "% of GDP, end of fiscal year"));
+  if (DATA.nat.creditors.length) cards.push(chartCard("ch-cred", "Who Pakistan's external public debt is owed to", "USD billion"));
+  $("#eco-charts").innerHTML = cards.join("");
+  if (S.cpi_avg || S.policy_rate_end_june)
+    lineChart("#ch-rates", [["cpi_avg", "CPI inflation (average)", "--series-1"], ["policy_rate_end_june", "Policy rate (end-June)", "--series-2"]]);
+  if (S.gdp_growth) barChart("#ch-growth", S.gdp_growth);
+  if (S.public_debt_gdp) lineChart("#ch-debt", [["public_debt_gdp", "Public debt to GDP", "--series-1"]]);
+  if (DATA.nat.creditors.length) creditorChart("#ch-cred");
+}
+
+function chartFrame(sel, H) {
+  const card = $(sel);
+  const W = Math.max(280, card.clientWidth - 32);
+  const svg = d3.select(card.querySelector("svg")).attr("viewBox", `0 0 ${W} ${H}`).attr("height", H);
+  svg.selectAll("*").remove();
+  return { card, svg, W, H };
+}
+
+function lineChart(sel, defs) {
+  const S = DATA.nat.series;
+  const series = defs.filter(([id]) => S[id]).map(([id, label, color]) => ({ id, label, color, pts: S[id].points }));
+  const { card, svg, W, H } = chartFrame(sel, 240);
+  const m = { t: 12, r: 64, b: 28, l: 36 };
+  const years = [...new Set(series.flatMap((s) => s.pts.map((p) => p.fy)))].sort();
+  const x = d3.scalePoint().domain(years).range([m.l, W - m.r]);
+  const vals = series.flatMap((s) => s.pts.map((p) => p.value));
+  const y = d3.scaleLinear().domain([Math.min(0, d3.min(vals)), d3.max(vals)]).nice().range([H - m.b, m.t]);
+  svg.append("g").attr("class", "grid").attr("transform", `translate(${m.l},0)`)
+    .call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat("")).call((g) => g.select(".domain").remove());
+  const step = Math.ceil(years.length / Math.max(2, Math.floor((W - m.l - m.r) / 54)));
+  svg.append("g").attr("transform", `translate(0,${H - m.b})`)
+    .call(d3.axisBottom(x).tickValues(years.filter((_, i) => i % step === 0)).tickFormat((d) => d.replace("FY20", "FY")));
+  svg.append("g").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5));
+  series.forEach((s) => {
+    const col = css(s.color);
+    svg.append("path").datum(s.pts).attr("fill", "none").attr("stroke", col).attr("stroke-width", 2)
+      .attr("d", d3.line().x((p) => x(p.fy)).y((p) => y(p.value)));
+    svg.append("g").selectAll("circle").data(s.pts).join("circle").attr("r", 4).attr("fill", col)
+      .attr("stroke", css("--surface")).attr("stroke-width", 2).attr("cx", (p) => x(p.fy)).attr("cy", (p) => y(p.value));
+    const last = s.pts[s.pts.length - 1];
+    svg.append("text").attr("class", "lbl").attr("x", x(last.fy) + 8).attr("y", y(last.value) + 4)
+      .text(last.value.toFixed(1) + "%");
+  });
+  card.querySelector(".legend-row").innerHTML = series.map((s) => `<span><i style="background:var(${s.color})"></i>${esc(s.label)}</span>`).join("");
+  card.querySelector(".chart-src").innerHTML = "Source: " + [...new Set(series.map((s) => S[s.id].source_url))]
+    .map((u) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(new URL(u).hostname.replace("www.", ""))}</a>`).join(", ");
+  hoverLayer(card, svg, x, years, series, m, H);
+}
+
+function hoverLayer(card, svg, x, years, series, m, H) {
+  const tip = card.querySelector(".tooltip");
+  const rule = svg.append("line").attr("y1", m.t).attr("y2", H - m.b).attr("stroke", css("--line-strong")).attr("opacity", 0);
+  svg.append("rect").attr("x", m.l).attr("y", m.t).attr("width", x.range()[1] - m.l + 10).attr("height", H - m.t - m.b)
+    .attr("fill", "transparent")
+    .on("mousemove", (ev) => {
+      const [mx] = d3.pointer(ev);
+      const fy = years.reduce((a, b) => Math.abs(x(b) - mx) < Math.abs(x(a) - mx) ? b : a);
+      rule.attr("x1", x(fy)).attr("x2", x(fy)).attr("opacity", 1);
+      tip.innerHTML = `<strong>${esc(fy)}</strong>` + series.map((s) => {
+        const p = s.pts.find((q) => q.fy === fy);
+        return `${esc(s.label)}: <span class="num">${p ? p.value.toFixed(1) + "%" : "–"}</span>`;
+      }).join("<br>");
+      tip.hidden = false;
+      const box = card.getBoundingClientRect();
+      tip.style.left = Math.min(ev.clientX - box.left + 12, box.width - 220) + "px";
+      tip.style.top = (ev.clientY - box.top - 10) + "px";
+    })
+    .on("mouseleave", () => { tip.hidden = true; rule.attr("opacity", 0); });
+}
+
+function barChart(sel, ser) {
+  const { card, svg, W, H } = chartFrame(sel, 240);
+  const m = { t: 16, r: 12, b: 28, l: 36 };
+  const pts = ser.points;
+  const x = d3.scaleBand().domain(pts.map((p) => p.fy)).range([m.l, W - m.r]).padding(0.28);
+  const y = d3.scaleLinear().domain([Math.min(0, d3.min(pts, (p) => p.value)), Math.max(0, d3.max(pts, (p) => p.value))]).nice().range([H - m.b, m.t]);
+  svg.append("g").attr("class", "grid").attr("transform", `translate(${m.l},0)`)
+    .call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat("")).call((g) => g.select(".domain").remove());
+  const step = Math.ceil(pts.length / Math.max(2, Math.floor((W - m.l - m.r) / 54)));
+  svg.append("g").attr("transform", `translate(0,${y(0)})`)
+    .call(d3.axisBottom(x).tickValues(pts.map((p) => p.fy).filter((_, i) => i % step === 0)).tickFormat((d) => d.replace("FY20", "FY")))
+    .call((g) => g.selectAll("text").attr("transform", `translate(0,${H - m.b - y(0)})`));
+  svg.append("g").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5));
+  const tip = card.querySelector(".tooltip");
+  svg.append("g").selectAll("rect").data(pts).join("rect")
+    .attr("x", (p) => x(p.fy)).attr("width", x.bandwidth())
+    .attr("y", (p) => y(Math.max(0, p.value))).attr("height", (p) => Math.max(1, Math.abs(y(p.value) - y(0))))
+    .attr("rx", 3).attr("fill", (p) => p.value < 0 ? css("--series-2") : css("--series-1"))
+    .on("mousemove", (ev, p) => {
+      tip.innerHTML = `<strong>${esc(p.fy)}</strong><span class="num">${p.value.toFixed(2)}%</span>`;
+      tip.hidden = false;
+      const box = card.getBoundingClientRect();
+      tip.style.left = Math.min(ev.clientX - box.left + 12, box.width - 160) + "px";
+      tip.style.top = (ev.clientY - box.top - 10) + "px";
+    })
+    .on("mouseleave", () => { tip.hidden = true; });
+  const last = pts[pts.length - 1];
+  svg.append("text").attr("class", "lbl").attr("text-anchor", "middle").attr("x", x(last.fy) + x.bandwidth() / 2)
+    .attr("y", y(Math.max(0, last.value)) - 5).text(last.value.toFixed(1) + "%");
+  card.querySelector(".legend-row").innerHTML = pts.some((p) => p.value < 0)
+    ? `<span><i style="background:var(--series-1)"></i>Growth</span><span><i style="background:var(--series-2)"></i>Contraction</span>` : "";
+  card.querySelector(".chart-src").innerHTML = `Source: <a href="${esc(ser.source_url)}" target="_blank" rel="noopener">${esc(new URL(ser.source_url).hostname.replace("www.", ""))}</a>`;
+}
+
+function creditorChart(sel) {
+  const rows = DATA.nat.creditors.slice(0, 14);
+  const H = rows.length * 26 + 28;
+  const { card, svg, W } = chartFrame(sel, H);
+  const labelW = Math.min(170, W * 0.42);
+  const m = { t: 4, r: 52, b: 20, l: labelW };
+  const x = d3.scaleLinear().domain([0, d3.max(rows, (r) => r.value_usd_bn)]).nice().range([m.l, W - m.r]);
+  const y = d3.scaleBand().domain(rows.map((r) => r.creditor)).range([m.t, H - m.b]).padding(0.25);
+  svg.append("g").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(4));
+  svg.append("g").selectAll("text.cl").data(rows).join("text").attr("class", "cl")
+    .attr("x", m.l - 8).attr("y", (r) => y(r.creditor) + y.bandwidth() / 2 + 4).attr("text-anchor", "end")
+    .style("fill", css("--ink-2")).style("font-family", "var(--font-body)").style("font-size", "12px")
+    .text((r) => r.creditor.length > 26 ? r.creditor.slice(0, 25) + "…" : r.creditor);
+  const tip = card.querySelector(".tooltip");
+  svg.append("g").selectAll("rect").data(rows).join("rect")
+    .attr("x", m.l).attr("y", (r) => y(r.creditor)).attr("height", y.bandwidth())
+    .attr("width", (r) => Math.max(2, x(r.value_usd_bn) - m.l)).attr("rx", 3).attr("fill", css("--series-1"))
+    .on("mousemove", (ev, r) => {
+      tip.innerHTML = `<strong>${esc(r.creditor)}</strong>${esc(r.creditor_type)}<br><span class="num">$${r.value_usd_bn.toFixed(2)} bn</span> · ${esc(r.period)}`;
+      tip.hidden = false;
+      const box = card.getBoundingClientRect();
+      tip.style.left = Math.min(ev.clientX - box.left + 12, box.width - 240) + "px";
+      tip.style.top = (ev.clientY - box.top - 10) + "px";
+    })
+    .on("mouseleave", () => { tip.hidden = true; });
+  svg.append("g").selectAll("text.vl").data(rows).join("text").attr("class", "vl")
+    .attr("x", (r) => x(r.value_usd_bn) + 6).attr("y", (r) => y(r.creditor) + y.bandwidth() / 2 + 4)
+    .text((r) => r.value_usd_bn.toFixed(1));
+  const periods = [...new Set(rows.map((r) => r.period))].join("; ");
+  const urls = [...new Set(rows.map((r) => r.source_url))];
+  card.querySelector(".chart-src").innerHTML = `${esc(periods)}. Source: ` + urls.map((u) =>
+    `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(new URL(u).hostname.replace("www.", ""))}</a>`).join(", ");
+}
+
+function healthSurveys() {
+  const h = (DATA.nat && DATA.nat.health) || [];
+  const seen = [];
+  h.forEach((r) => { const k = r.survey + " " + r.survey_year; if (!seen.includes(k)) seen.push(k); });
+  return seen;
+}
+
+function drawHealth() {
+  const h = DATA.nat.health || [];
+  if (!h.length) { $("#eco-health").hidden = true; return; }
+  const surveys = healthSurveys();
+  const sel = $("#health-survey");
+  if (!sel.options.length) {
+    sel.innerHTML = surveys.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join("");
+    sel.addEventListener("change", drawHealth);
+  }
+  const cur = sel.value || surveys[0];
+  const rows = h.filter((r) => r.survey + " " + r.survey_year === cur);
+  const regions = REGION_ORDER.filter((c) => rows.some((r) => r.region_code === c));
+  const inds = HEALTH_IND.filter(([id]) => rows.some((r) => r.indicator === id));
+  const maxOf = {};
+  inds.forEach(([id]) => { maxOf[id] = d3.max(rows.filter((r) => r.indicator === id), (r) => r.value); });
+  $("#health-table").innerHTML = `<thead><tr><th>Region</th>${inds.map(([, l, u]) =>
+    `<th class="n">${esc(l)}<br><span class="cmp-muted" style="font-weight:400">${esc(u)}</span></th>`).join("")}</tr></thead><tbody>` +
+    regions.map((c) => `<tr><td${c === "PK" ? ' style="font-weight:600"' : ""}>${esc(REGION_NAME[c] || DATA.ind.provinces[c] || c)}</td>` +
+      inds.map(([id]) => {
+        const r = rows.find((q) => q.region_code === c && q.indicator === id);
+        return `<td class="n">${r ? r.value.toFixed(id === "tfr" ? 1 : 0) : "–"}${r ? `<span class="hbar" style="width:${(36 * r.value / maxOf[id]).toFixed(0)}px"></span>` : ""}</td>`;
+      }).join("") + `</tr>`).join("") + `</tbody>`;
+  const any = rows[0];
+  const periods = [...new Set(rows.filter((r) => r.indicator !== "tfr").map((r) => r.reference_period).filter(Boolean))];
+  $("#health-desc").innerHTML = `Fertility is births per woman; mortality is deaths before the stated age per 1,000 live births` +
+    (periods.length ? `, for the ${esc(periods.join("; "))}` : "") +
+    `. <a href="${esc(any.source_url)}" target="_blank" rel="noopener">Source${any.table_or_page ? ", " + esc(any.table_or_page) : ""}</a>.`;
+}
+
+/* Province health rows for the district profile (first survey listed). */
+function provinceHealth(code) {
+  if (!DATA.nat || !DATA.nat.health) return null;
+  const first = healthSurveys()[0];
+  const pick = (c, id) => DATA.nat.health.find((r) => r.region_code === c && r.indicator === id && r.survey + " " + r.survey_year === first);
+  const rows = HEALTH_IND.map(([id, label]) => ({ id, label, p: pick(code, id), n: pick("PK", id) })).filter((r) => r.p);
+  return rows.length ? { survey: first, rows } : null;
+}
+
+/* ============================================================
+   DATA & METHODS
+   ============================================================ */
+const DOWNLOADS = [
+  ["indicators_wide.csv", "District indicators", "One row per district, one column per indicator. The main table."],
+  ["indicator_catalog.csv", "Indicator catalogue", "What each column means, its unit and its source."],
+  ["aggregates.csv", "Province and national totals", "The same indicators for each province and Pakistan."],
+  ["districts.csv", "District list", "Every district's ID, name, province, area and outline confidence."],
+  ["tehsils.csv", "Tehsil assignments", "Which district each tehsil was placed in, and how."],
+  ["firms.csv", "Companies", "Every company figure with its period, basis and source."],
+  ["national_stats.csv", "National figures", "Debt, prices, output, ratings and more, each with its period and source."],
+  ["national_series.csv", "National histories", "Annual series behind the Economy charts."],
+  ["national_creditors.csv", "External debt by creditor", "Who Pakistan's external public debt is owed to."],
+  ["national_province_health.csv", "Fertility and child mortality", "Province figures by survey."],
+];
+function drawData() {
+  $("#src-census").textContent = DATA.ind.sources.census;
+  $("#src-bounds").textContent = DATA.ind.sources.boundaries;
+  $("#downloads").innerHTML = DOWNLOADS.map(([f, t, d]) => `<div class="dl"><strong>${esc(t)}</strong><p>${esc(d)}</p>
+    <div class="dl-actions"><button class="btn primary" data-copy="${f}">Copy as CSV</button>
+    <a class="btn" href="data/${f}" target="_blank" rel="noopener">Open ${f}</a><span class="copied" aria-live="polite"></span></div></div>`).join("");
+  $("#downloads").querySelectorAll("[data-copy]").forEach((b) => b.addEventListener("click", async () => {
+    const note = b.parentElement.querySelector(".copied");
+    try {
+      const text = await fetch("data/" + b.dataset.copy).then((r) => r.text());
+      await navigator.clipboard.writeText(text);
+      note.textContent = "Copied";
+    } catch (e) {
+      note.textContent = "Copy is blocked here. Use Open instead.";
+    }
+  }));
+  $("#cat-table").innerHTML = `<thead><tr><th>Indicator</th><th>Unit</th><th>Meaning</th><th>Year</th></tr></thead><tbody>` +
+    DATA.ind.catalog.map((c) => `<tr><td>${esc(c.label)}<br><span class="num cmp-muted">${esc(c.indicator_id)}</span></td>
+      <td>${esc(c.unit)}</td><td>${esc(c.description)}</td><td class="num">${c.year}</td></tr>`).join("") + `</tbody>`;
+  const year = new Date().getFullYear();
+  $("#cite").textContent = `Zila Atlas (${year}). District indicators for Pakistan from the 7th Population and Housing Census 2023 (Pakistan Bureau of Statistics). Accessed ${new Date().toISOString().slice(0, 10)}.
+
+@misc{zila_atlas_${year},
+  title  = {Zila Atlas: district indicators for Pakistan},
+  year   = {${year}},
+  note   = {Census 2023 data from the Pakistan Bureau of Statistics; district boundaries assembled from 2017 census tehsils}
+}`;
+}
+
+/* ============================================================
+   Wiring
+   ============================================================ */
+function wire() {
+  document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => {
+    history.replaceState(null, "", "#" + t.dataset.view);
+    show(t.dataset.view);
+  }));
+  window.addEventListener("hashchange", readHash);
+
+  fillIndicatorSelect($("#ind-select"), STATE.indicator, false);
+  $("#ind-select").addEventListener("change", (e) => setIndicator(e.target.value));
+  fillIndicatorSelect($("#x-select"), STATE.x, true);
+  fillIndicatorSelect($("#y-select"), STATE.y, true);
+  $("#x-select").addEventListener("change", (e) => { STATE.x = e.target.value; drawCompare(); });
+  $("#y-select").addEventListener("change", (e) => { STATE.y = e.target.value; drawCompare(); });
+  $("#prov-select").innerHTML = `<option value="">None</option>` +
+    CENSUS_PROVS.map((p) => `<option value="${p}">${esc(DATA.ind.provinces[p])}</option>`).join("");
+  $("#prov-select").addEventListener("change", (e) => { STATE.province = e.target.value; drawCompare(); });
+
+  const names = Object.entries(DATA.ind.districts).map(([k, d]) => d.name + ", " + DATA.ind.provinces[d.province]).sort();
+  $("#district-list").innerHTML = names.map((n) => `<option value="${esc(n)}"></option>`).join("");
+  $("#search").addEventListener("change", (e) => {
+    const id = DATA.nameToId[e.target.value.trim().toLowerCase()];
+    if (id) { selectDistrict(id, true); e.target.value = ""; }
+  });
+
+  $("#opt-imagery").addEventListener("change", (e) => {
+    if (MAP.map && MAP.map.getLayer("imagery")) MAP.map.setLayoutProperty("imagery", "visibility", e.target.checked ? "visible" : "none");
+  });
+  $("#opt-provinces").addEventListener("change", (e) => {
+    if (MAP.map && MAP.map.getLayer("province-line")) MAP.map.setLayoutProperty("province-line", "visibility", e.target.checked ? "visible" : "none");
+  });
+
+  const setFv = (v) => {
+    STATE.firmsView = v;
+    $("#fv-hq").setAttribute("aria-pressed", String(v === "hq"));
+    $("#fv-ops").setAttribute("aria-pressed", String(v === "ops"));
+    drawFirms();
+  };
+  $("#fv-hq").addEventListener("click", () => setFv("hq"));
+  $("#fv-ops").addEventListener("click", () => setFv("ops"));
+
+  // Repaint map and chart when the theme changes.
+  const repaint = () => { recolorMap(); drawLegend(); if (STATE.view === "compare") drawCompare(); if (STATE.view === "economy") drawEcoCharts(); };
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", repaint);
+  new MutationObserver(repaint).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  let rt;
+  window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (STATE.view === "compare") drawCompare(); if (STATE.view === "economy" && DATA.nat) drawEcoCharts(); }, 150); });
+}
+
+(async function start() {
+  try {
+    await loadAll();
+  } catch (e) {
+    $("#detail").innerHTML = `<div class="detail-empty"><p>The data files could not be loaded (${esc(e.message)}). Reload the page to try again.</p></div>`;
+    return;
+  }
+  wire();
+  drawLegend();
+  drawDetail();
+  drawData();
+  initMap();
+  readHash();
+})();
+</script>

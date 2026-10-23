@@ -1,0 +1,3 @@
+firm_id,firm_name,group_name,entity_type,psx_ticker,secp_cuin,sector,hq_province_code,hq_district_id,operating_province_codes,fiscal_year_end,revenue_status,revenue_pkr_mn,total_assets_pkr_mn,market_cap_pkr_mn,market_cap_date,source,confidence,last_verified,notes
+BAD1,Guessed Private Co,,private,,,Food,PB,PB-LAHORE,PB,,undisclosed,50000,,,,,low,2026-10-22,estimated revenue - should fail
+BAD2,No Date Listed Co,,listed,,,Cement,PB,PB-LAHOR,PB;XX,2025-06-30,reported,1000,,2000,,some report,high,2026-10-22,typo district + no ticker + no cap date

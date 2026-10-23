@@ -1,0 +1,157 @@
+district_id,district_name,census_name,province_code,province_name,in_census_2023,area_km2,label_lon,label_lat,boundary_confidence
+BA-AWARAN,Awaran,AWARAN,BA,Balochistan,True,24944.7,65.4646,26.4254,high
+BA-BARKHAN,Barkhan,BARKHAN,BA,Balochistan,True,3493.6,69.6969,29.9872,high
+BA-CHAGAI,Chagai,CHAGAI,BA,Balochistan,True,44408.7,63.4157,28.8781,high
+BA-CHAMAN,Chaman,CHAMAN,BA,Balochistan,True,1340.5,66.4881,30.7842,high
+BA-DERA-BUGTI,Dera Bugti,DERA BUGTI,BA,Balochistan,True,10269.1,69.0092,29.0647,medium
+BA-DUKI,Duki,DUKI,BA,Balochistan,True,4346.1,68.9495,30.177,high
+BA-GWADAR,Gwadar,GWADAR,BA,Balochistan,True,11415.7,62.5399,25.3923,medium
+BA-HARNAI,Harnai,HARNAI,BA,Balochistan,True,3051.7,68.0872,30.035,high
+BA-JAFFARABAD,Jaffarabad,JAFFARABAD,BA,Balochistan,True,2481.4,68.2425,28.2828,low
+BA-JHAL-MAGSI,Jhal Magsi,JHAL MAGSI,BA,Balochistan,True,3841.8,67.5388,28.3809,high
+BA-KACHHI,Kachhi,KACHHI,BA,Balochistan,True,6661.5,67.7103,29.2955,high
+BA-KALAT,Kalat,KALAT,BA,Balochistan,True,10142.4,66.7683,29.0914,high
+BA-KECH,Kech,KECH,BA,Balochistan,True,24085.1,63.1105,26.0076,medium
+BA-KHARAN,Kharan,KHARAN,BA,Balochistan,True,10703.6,65.4247,28.6827,high
+BA-KHUZDAR,Khuzdar,KHUZDAR,BA,Balochistan,True,30982.0,66.4784,27.3,high
+BA-KILLA-ABDULLAH,Killa Abdullah,KILLA ABDULLAH,BA,Balochistan,True,4427.2,66.6992,30.6805,high
+BA-KILLA-SAIFULLAH,Killa Saifullah,KILLA SAIFULLAH,BA,Balochistan,True,10109.0,68.0833,31.0483,high
+BA-KOHLU,Kohlu,KOHLU,BA,Balochistan,True,7690.1,68.8106,29.6446,medium
+BA-LASBELA,Lasbela,LASBELA,BA,Balochistan,True,14114.5,66.6041,25.7797,high
+BA-LORALAI,Loralai,LORALAI,BA,Balochistan,True,3797.8,68.8885,30.4678,high
+BA-MASTUNG,Mastung,MASTUNG,BA,Balochistan,True,5704.1,66.7196,29.7942,high
+BA-MUSAKHEL,Musakhel,MUSAKHEL,BA,Balochistan,True,5978.9,69.9587,30.8895,high
+BA-NASIRABAD,Nasirabad,NASIRABAD,BA,Balochistan,True,3230.4,68.1298,28.634,high
+BA-NUSHKI,Nushki,NUSHKI,BA,Balochistan,True,5827.7,65.7398,29.4433,high
+BA-PANJGUR,Panjgur,PANJGUR,BA,Balochistan,True,17576.9,64.2007,26.7098,high
+BA-PISHIN,Pishin,PISHIN,BA,Balochistan,True,4927.6,67.1406,30.7963,high
+BA-QUETTA,Quetta,QUETTA,BA,Balochistan,True,2740.6,66.4982,30.138,high
+BA-SHERANI,Sherani,SHERANI,BA,Balochistan,True,2948.8,69.7662,31.6942,high
+BA-SIBI,Sibi,SIBI,BA,Balochistan,True,6905.8,67.9839,29.4494,high
+BA-SOHBATPUR,Sohbatpur,SOHBATPUR,BA,Balochistan,True,670.1,68.5462,28.5461,high
+BA-SURAB,Surab,SURAB,BA,Balochistan,True,3708.2,66.1814,28.3221,high
+BA-WASHUK,Washuk,WASHUK,BA,Balochistan,True,36528.3,64.305,27.7853,high
+BA-ZHOB,Zhob,ZHOB,BA,Balochistan,True,14229.8,69.1519,31.2226,low
+BA-ZIARAT,Ziarat,ZIARAT,BA,Balochistan,True,3266.4,67.4686,30.377,medium
+GB-ASTORE,Astore,,GB,Gilgit-Baltistan,False,5210.3,74.8719,35.2349,high
+GB-DIAMER,Diamer,,GB,Gilgit-Baltistan,False,6905.1,74.2437,35.4892,high
+GB-GHANCHE,Ghanche,,GB,Gilgit-Baltistan,False,8546.9,76.6698,35.2372,high
+GB-GHIZER,Ghizer,,GB,Gilgit-Baltistan,False,12097.9,73.4559,36.373,high
+GB-GILGIT,Gilgit,,GB,Gilgit-Baltistan,False,4005.6,74.5086,35.9698,high
+GB-HUNZA,Hunza,,GB,Gilgit-Baltistan,False,11616.4,75.1946,36.5613,high
+GB-KHARMANG,Kharmang,,GB,Gilgit-Baltistan,False,2791.1,76.1139,34.8812,high
+GB-NAGAR,Nagar,,GB,Gilgit-Baltistan,False,2866.2,74.2167,36.348,high
+GB-SHIGAR,Shigar,,GB,Gilgit-Baltistan,False,8922.0,75.9266,35.7347,high
+GB-SKARDU,Skardu,,GB,Gilgit-Baltistan,False,7116.6,75.6017,35.1767,high
+IS-ISLAMABAD,Islamabad,ISLAMABAD,IS,Islamabad Capital Territory,True,905.5,73.2108,33.632,high
+JK-BAGH,Bagh,,JK,Azad Jammu and Kashmir,False,679.8,73.7358,34.0028,high
+JK-BHIMBER,Bhimber,,JK,Azad Jammu and Kashmir,False,1197.1,74.1394,33.0098,high
+JK-HATTIAN-BALA,Hattian Bala,,JK,Azad Jammu and Kashmir,False,724.1,73.8189,34.1903,high
+JK-HAVELI,Haveli,,JK,Azad Jammu and Kashmir,False,542.2,74.1277,33.9236,high
+JK-KOTLI,Kotli,,JK,Azad Jammu and Kashmir,False,1617.1,73.9477,33.4534,high
+JK-MIRPUR,Mirpur,,JK,Azad Jammu and Kashmir,False,900.1,73.7644,33.2379,high
+JK-MUZAFFARABAD,Muzaffarabad,,JK,Azad Jammu and Kashmir,False,1304.2,73.5984,34.3236,high
+JK-NEELUM,Neelum,,JK,Azad Jammu and Kashmir,False,3497.5,74.0298,34.7567,high
+JK-POONCH,Poonch,,JK,Azad Jammu and Kashmir,False,729.4,73.893,33.7941,high
+JK-SUDHNOTI,Sudhnoti,,JK,Azad Jammu and Kashmir,False,572.5,73.7423,33.7097,high
+KP-ABBOTTABAD,Abbottabad,ABBOTTABAD,KP,Khyber Pakhtunkhwa,True,1755.6,73.2637,34.0912,high
+KP-BAJAUR,Bajaur,BAJAUR,KP,Khyber Pakhtunkhwa,True,1359.6,71.4852,34.7428,high
+KP-BANNU,Bannu,BANNU,KP,Khyber Pakhtunkhwa,True,2004.6,70.6558,32.9835,medium
+KP-BATTAGRAM,Battagram,BATAGRAM,KP,Khyber Pakhtunkhwa,True,1355.5,73.0615,34.7603,high
+KP-BUNER,Buner,BUNER,KP,Khyber Pakhtunkhwa,True,1734.8,72.5512,34.432,high
+KP-CHARSADDA,Charsadda,CHARSADDA,KP,Khyber Pakhtunkhwa,True,990.9,71.6916,34.2525,high
+KP-DERA-ISMAIL-KHAN,Dera Ismail Khan,DERA ISMAIL KHAN,KP,Khyber Pakhtunkhwa,True,9044.4,70.6258,31.8478,medium
+KP-HANGU,Hangu,HANGU,KP,Khyber Pakhtunkhwa,True,1380.0,70.8035,33.4087,high
+KP-HARIPUR,Haripur,HARIPUR,KP,Khyber Pakhtunkhwa,True,1927.2,72.8543,34.0519,high
+KP-KARAK,Karak,KARAK,KP,Khyber Pakhtunkhwa,True,2653.7,71.1079,33.0872,high
+KP-KHYBER,Khyber,KHYBER,KP,Khyber Pakhtunkhwa,True,2741.8,71.2021,34.0362,high
+KP-KOHAT,Kohat,KOHAT,KP,Khyber Pakhtunkhwa,True,3443.4,71.4926,33.4129,medium
+KP-KOLAI-PALAS,Kolai Palas,KOLAI PALAS KOHISTAN,KP,Khyber Pakhtunkhwa,True,1411.0,73.1269,35.0607,high
+KP-KURRAM,Kurram,KURRAM,KP,Khyber Pakhtunkhwa,True,3388.2,70.3852,33.6888,high
+KP-LAKKI-MARWAT,Lakki Marwat,LAKKI MARWAT,KP,Khyber Pakhtunkhwa,True,3367.8,70.8847,32.5621,medium
+KP-LOWER-CHITRAL,Lower Chitral,LOWER CHITRAL,KP,Khyber Pakhtunkhwa,True,5910.5,71.8058,35.8561,high
+KP-LOWER-DIR,Lower Dir,LOWER DIR,KP,Khyber Pakhtunkhwa,True,1758.1,71.8772,34.8515,medium
+KP-LOWER-KOHISTAN,Lower Kohistan,LOWER KOHISTAN,KP,Khyber Pakhtunkhwa,True,642.5,72.8899,35.2665,high
+KP-MALAKAND,Malakand,MALAKAND,KP,Khyber Pakhtunkhwa,True,947.6,71.8249,34.5167,high
+KP-MANSEHRA,Mansehra,MANSEHRA,KP,Khyber Pakhtunkhwa,True,4286.0,73.4436,34.7,high
+KP-MARDAN,Mardan,MARDAN,KP,Khyber Pakhtunkhwa,True,1639.6,72.0786,34.3064,high
+KP-MOHMAND,Mohmand,MOHMAND,KP,Khyber Pakhtunkhwa,True,2257.5,71.366,34.4473,high
+KP-NORTH-WAZIRISTAN,North Waziristan,NORTH WAZIRISTAN,KP,Khyber Pakhtunkhwa,True,4892.9,69.9426,32.9539,high
+KP-NOWSHERA,Nowshera,NOWSHERA,KP,Khyber Pakhtunkhwa,True,1746.5,72.0019,33.9126,high
+KP-ORAKZAI,Orakzai,ORAKZAI,KP,Khyber Pakhtunkhwa,True,1376.2,70.8778,33.6951,high
+KP-PESHAWAR,Peshawar,PESHAWAR,KP,Khyber Pakhtunkhwa,True,1517.6,71.6135,33.9289,medium
+KP-SHANGLA,Shangla,SHANGLA,KP,Khyber Pakhtunkhwa,True,1388.5,72.7915,34.8424,high
+KP-SOUTH-WAZIRISTAN,South Waziristan,SOUTH WAZIRISTAN,KP,Khyber Pakhtunkhwa,True,6229.2,69.6786,32.2946,high
+KP-SWABI,Swabi,SWABI,KP,Khyber Pakhtunkhwa,True,1481.5,72.4792,34.138,high
+KP-SWAT,Swat,SWAT,KP,Khyber Pakhtunkhwa,True,5367.0,72.5109,35.2349,high
+KP-TANK,Tank,TANK,KP,Khyber Pakhtunkhwa,True,2821.1,70.3749,32.319,medium
+KP-TORGHAR,Torghar,TORGHAR,KP,Khyber Pakhtunkhwa,True,467.1,72.8677,34.5451,high
+KP-UPPER-CHITRAL,Upper Chitral,UPPER CHITRAL,KP,Khyber Pakhtunkhwa,True,8846.2,72.2717,36.3459,high
+KP-UPPER-DIR,Upper Dir,UPPER DIR,KP,Khyber Pakhtunkhwa,True,3585.3,72.0529,35.3412,high
+KP-UPPER-KOHISTAN,Upper Kohistan,UPPER KOHISTAN,KP,Khyber Pakhtunkhwa,True,5601.9,73.2539,35.425,high
+PB-ATTOCK,Attock,ATTOCK,PB,Punjab,True,6826.4,72.4276,33.5156,high
+PB-BAHAWALNAGAR,Bahawalnagar,BAHAWALNAGAR,PB,Punjab,True,8750.4,72.9952,29.5806,high
+PB-BAHAWALPUR,Bahawalpur,BAHAWALPUR,PB,Punjab,True,23907.2,71.7668,28.8277,high
+PB-BHAKKAR,Bhakkar,BHAKKAR,PB,Punjab,True,8521.1,71.3392,31.672,high
+PB-CHAKWAL,Chakwal,CHAKWAL,PB,Punjab,True,6681.2,72.5343,32.8737,high
+PB-CHINIOT,Chiniot,CHINIOT,PB,Punjab,True,2609.0,72.801,31.675,high
+PB-DERA-GHAZI-KHAN,Dera Ghazi Khan,DERA GHAZI KHAN,PB,Punjab,True,11688.6,70.4109,30.4787,high
+PB-FAISALABAD,Faisalabad,FAISALABAD,PB,Punjab,True,5960.8,73.2032,31.2293,high
+PB-GUJRANWALA,Gujranwala,GUJRANWALA,PB,Punjab,True,3623.9,74.0587,32.1854,high
+PB-GUJRAT,Gujrat,GUJRAT,PB,Punjab,True,3176.1,74.0374,32.7192,high
+PB-HAFIZABAD,Hafizabad,HAFIZABAD,PB,Punjab,True,2273.3,73.5448,32.0526,high
+PB-JHANG,Jhang,JHANG,PB,Punjab,True,6353.0,72.14,31.1666,high
+PB-JHELUM,Jhelum,JHELUM,PB,Punjab,True,3579.4,73.4459,32.8295,high
+PB-KASUR,Kasur,KASUR,PB,Punjab,True,3894.3,74.1377,31.0052,high
+PB-KHANEWAL,Khanewal,KHANEWAL,PB,Punjab,True,4361.8,72.0685,30.3152,high
+PB-KHUSHAB,Khushab,KHUSHAB,PB,Punjab,True,6622.0,72.0513,32.1238,high
+PB-LAHORE,Lahore,LAHORE,PB,Punjab,True,1684.7,74.4023,31.4837,high
+PB-LAYYAH,Layyah,LAYYAH,PB,Punjab,True,6378.9,71.2799,30.9889,high
+PB-LODHRAN,Lodhran,LODHRAN,PB,Punjab,True,2663.1,71.7439,29.6727,high
+PB-MANDI-BAHAUDDIN,Mandi Bahauddin,MANDI BAHAUDDIN,PB,Punjab,True,2758.8,73.4754,32.4345,high
+PB-MIANWALI,Mianwali,MIANWALI,PB,Punjab,True,6028.1,71.5166,32.7026,high
+PB-MULTAN,Multan,MULTAN,PB,Punjab,True,3645.3,71.3725,29.9297,high
+PB-MUZAFFARGARH,Muzaffargarh,MUZAFFARGARH,PB,Punjab,True,7670.1,71.0141,29.8915,high
+PB-NANKANA-SAHIB,Nankana Sahib,NANKANA SAHIB,PB,Punjab,True,2171.3,73.8527,31.4293,high
+PB-NAROWAL,Narowal,NAROWAL,PB,Punjab,True,2323.9,75.0338,32.2096,high
+PB-OKARA,Okara,OKARA,PB,Punjab,True,4415.0,73.7383,30.6995,high
+PB-PAKPATTAN,Pakpattan,PAKPATTAN,PB,Punjab,True,2687.3,73.2397,30.3188,high
+PB-RAHIM-YAR-KHAN,Rahim Yar Khan,RAHIM YAR KHAN,PB,Punjab,True,12884.1,70.4571,28.4836,high
+PB-RAJANPUR,Rajanpur,RAJANPUR,PB,Punjab,True,12529.7,70.1473,29.139,high
+PB-RAWALPINDI,Rawalpindi,RAWALPINDI,PB,Punjab,True,5204.6,73.4476,33.5432,high
+PB-SAHIWAL,Sahiwal,SAHIWAL,PB,Punjab,True,3222.2,72.8966,30.5464,high
+PB-SARGODHA,Sargodha,SARGODHA,PB,Punjab,True,5780.0,72.7914,32.0668,high
+PB-SHEIKHUPURA,Sheikhupura,SHEIKHUPURA,PB,Punjab,True,3632.2,73.9907,31.7132,high
+PB-SIALKOT,Sialkot,SIALKOT,PB,Punjab,True,3093.1,74.5717,32.4432,high
+PB-TOBA-TEK-SINGH,Toba Tek Singh,TOBA TEK SINGH,PB,Punjab,True,3072.9,72.5394,30.928,high
+PB-VEHARI,Vehari,VEHARI,PB,Punjab,True,4484.5,72.321,29.9823,high
+SD-BADIN,Badin,BADIN,SD,Sindh,True,6471.2,68.805,24.7454,high
+SD-DADU,Dadu,DADU,SD,Sindh,True,8034.8,67.5046,26.7723,high
+SD-GHOTKI,Ghotki,GHOTKI,SD,Sindh,True,6393.6,69.6918,27.8269,high
+SD-HYDERABAD,Hyderabad,HYDERABAD,SD,Sindh,True,1021.5,68.4437,25.3541,high
+SD-JACOBABAD,Jacobabad,JACOBABAD,SD,Sindh,True,2084.1,68.6998,28.2671,high
+SD-JAMSHORO,Jamshoro,JAMSHORO,SD,Sindh,True,11249.9,67.8534,25.7862,high
+SD-KARACHI-CENTRAL,Karachi Central,KARACHI CENTRAL,SD,Sindh,True,61.5,67.0599,24.947,medium
+SD-KARACHI-EAST,Karachi East,KARACHI EAST,SD,Sindh,True,117.7,67.1206,24.903,low
+SD-KARACHI-SOUTH,Karachi South,KARACHI SOUTH,SD,Sindh,True,85.2,67.0283,24.8134,low
+SD-KARACHI-WEST,Karachi West,KARACHI WEST,SD,Sindh,True,23.8,66.9926,24.9532,medium
+SD-KASHMORE,Kashmore,KASHMORE,SD,Sindh,True,2664.4,69.1877,28.2397,high
+SD-KEAMARI,Keamari,KEAMARI,SD,Sindh,True,457.6,66.8603,24.9043,medium
+SD-KHAIRPUR,Khairpur,KHAIRPUR,SD,Sindh,True,15925.0,68.9332,26.9287,high
+SD-KORANGI,Korangi,KORANGI,SD,Sindh,True,113.3,67.1668,24.8359,medium
+SD-LARKANA,Larkana,LARKANA,SD,Sindh,True,1906.9,68.2058,27.5332,high
+SD-MALIR,Malir,MALIR,SD,Sindh,True,2812.9,67.1566,25.2041,medium
+SD-MATIARI,Matiari,MATIARI,SD,Sindh,True,1459.2,68.4229,25.7676,high
+SD-MIRPUR-KHAS,Mirpur Khas,MIRPUR KHAS,SD,Sindh,True,3318.9,69.1579,25.3088,high
+SD-NAUSHAHRO-FEROZE,Naushahro Feroze,NAUSHAHRO FEROZE,SD,Sindh,True,3028.0,68.0977,26.8922,high
+SD-QAMBAR-SHAHDADKOT,Qambar Shahdadkot,KAMBAR SHAHDAD KOT,SD,Sindh,True,5598.8,67.6792,27.6499,high
+SD-SANGHAR,Sanghar,SANGHAR,SD,Sindh,True,10259.0,69.292,25.9785,high
+SD-SHAHEED-BENAZIRABAD,Shaheed Benazirabad,SHAHEED BENAZIRABAD,SD,Sindh,True,4618.4,68.2842,26.3122,high
+SD-SHIKARPUR,Shikarpur,SHIKARPUR,SD,Sindh,True,2577.2,68.5928,27.9271,high
+SD-SUJAWAL,Sujawal,SUJAWAL,SD,Sindh,True,8698.3,68.1803,24.3741,high
+SD-SUKKUR,Sukkur,SUKKUR,SD,Sindh,True,5215.8,69.0604,27.557,high
+SD-TANDO-ALLAHYAR,Tando Allahyar,TANDO AHYAR,SD,Sindh,True,1573.0,68.754,25.4795,high
+SD-TANDO-MUHAMMAD-KHAN,Tando Muhammad Khan,TANDO MUHAMMAD KHAN,SD,Sindh,True,1813.4,68.4634,25.0221,high
+SD-THARPARKAR,Tharparkar,THARPARKAR,SD,Sindh,True,19807.1,70.2432,24.9499,high
+SD-THATTA,Thatta,THATTA,SD,Sindh,True,7702.8,67.7063,24.6994,high
+SD-UMERKOT,Umerkot,UMER KOT,SD,Sindh,True,5503.4,69.8128,25.3338,high
