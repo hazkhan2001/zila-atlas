@@ -98,6 +98,10 @@ button, select, input { font: inherit; color: inherit; }
 .brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--ink); }
 .brand-name { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; letter-spacing: -0.01em; }
 .brand-urdu { font-family: var(--font-urdu); font-size: 1.05rem; color: var(--accent); line-height: 1; }
+/* LESSON: a small, quiet label tells visitors this is an early version without a loud banner.
+   It reuses the site's existing colour variables, so light and dark mode both work automatically. */
+.preview-tag { font-family: var(--font-data); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--line-strong); border-radius: 999px; padding: 1px 8px; align-self: center; }
 .tabs { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; }
 .tab {
   border: 0; background: none; padding: 8px 12px; border-radius: var(--radius); cursor: pointer;
@@ -312,6 +316,7 @@ main { display: block; }
     <a class="brand" href="#map" aria-label="Zila Atlas, home">
       <span class="brand-name">Zila Atlas</span>
       <span class="brand-urdu" lang="ur" dir="rtl">ضلع</span>
+      <span class="preview-tag" title="Early version: figures are sourced but still being checked">Early preview</span>
     </a>
     <nav class="tabs" role="tablist" aria-label="Views">
       <button class="tab" role="tab" id="tab-map" data-view="map" aria-selected="true">Map</button>
@@ -484,7 +489,8 @@ main { display: block; }
         <h2>How to cite</h2>
         <div class="cite" id="cite"></div>
         <h2>Corrections</h2>
-        <p>Found a wrong number, a misplaced tehsil or a misspelled name? Every correction is logged with the date and what changed, and the affected tables are rebuilt. Corrections so far: none.</p>
+        <p>Zila Atlas is an early preview. Every figure links to its source and carries a confidence label, and some figures are still being checked against original filings.</p>
+        <p>Found a wrong number, a misplaced tehsil or a misspelled name? <a href="https://github.com/hazkhan2001/zila-atlas/issues/new" rel="noopener">Report it here</a> (a free GitHub account is needed), or tell the person who sent you the link. Every correction is logged with the date and what changed, and the affected tables are rebuilt. Corrections so far: none.</p>
       </div>
     </div>
   </section>
