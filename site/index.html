@@ -108,6 +108,9 @@ button, select, input { font: inherit; color: inherit; }
 
 /* ---------- views ---------- */
 main { display: block; }
+/* LESSON: the hidden attribute is weak. Any CSS rule that sets display (like .map-fallback's
+   display: grid) beats it, leaving an invisible element that still catches clicks. This rule makes hidden win. */
+[hidden] { display: none !important; }
 .view[hidden] { display: none !important; }
 .page {
   padding-left: max(16px, env(safe-area-inset-left, 0px));
